@@ -76,7 +76,7 @@ li.dropdown:hover> .dropdown-menu >li > a:hover{
 
 }
 
-li.dropdown:hover> .dropdown-menu >li > a:hover, li.dropdown:hover> 
+li.dropdown:hover> .dropdown-menu >li > a:hover, li.dropdown:hover>
 .dropdown-menu >li > a:focus{
   background-color: #C10000;
 }
@@ -140,4 +140,26 @@ button.signUpBtn:active{
 div.memberPage{
   margin-left: 100px;
   bottom:400px;
+}
+
+button.setting{
+  width: 195px;
+  height: 70px;
+  margin-left: 340px;
+  font-family: 'RockWell';
+  font-size: 23px;
+  margin-top:-350px;
+  color: white;
+  background-color: #C10000;
+  border-color: #C10000;
+  border-style: solid;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.listbox{
+  background-color: white;
+  position: absolute;
+  bottom: 100px;
+  margin-left: 335px;
 }
