@@ -163,3 +163,15 @@ button.setting{
   bottom: 100px;
   margin-left: 335px;
 }
+
+h3 span{
+  position: absolute;
+  color: white;
+  margin-left: 200px;
+  font-family: 'Rockwell';
+  font-size: 40px;
+  margin-top: 20px;
+  width: 780px;
+  text-align: justify;
+  margin-bottom: 50px;
+}

@@ -35,45 +35,64 @@
           </div>
 
           <ul class ="nav navigation nav-tabs navbar-right">
-            <li class="nav nav-tabs">
-              <a href="home.html">LOG OUT</a>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">SIGN UP</a>
+              <ul class="dropdown-menu">
+                <li><a href="signUpTrainer.html">AS TRAINER</a></li>
+                <li><a href="signUpMember.html">AS MEMBER</a></li>
+              </ul>
             </li>
           </ul>
 
           <ul class ="nav navigation nav-tabs navbar-right" style="margin-right: -15px;">
-            <li class="nav nav-tabs">
-              <a href="trainerSetting.html">SETTING</a>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LOGIN</a>
+              <ul class="dropdown-menu">
+                <li><a href="trainerLogin.html">AS TRAINER</a></li>
+                <li><a href="memberLogin.html">AS MEMBER</a></li>
+              </ul>
             </li>
           </ul>
 
 
-    <div class="container">
-      <h1><span style="margin-top:110px;left:-200px">WELCOME EUGENE</span></h1>
 
-        <div class="loginPage">
+  <div class="container">
+      <h3><span>WELCOME EUGENE! ENTER THE INFO TO CREATE A TRAINING SESSION</span></h3>
+
+        <div class="signUpPage">
           <img src="trainerLogin.jpg" height= "1015px" width="auto"></img>
         </div>
 
-        <div class="row">
-          <div class="col-lg-3 memberPage" style="margin-left:-100px;">
-            <a href="#"><img src="trainingHistory.jpg"></img></a>
-          </div>
-          <div class="col-lg-3 memberPage">
-            <a href="recordPersonalTrainingSession.html"><img src="personalTrainingSession.jpg"></img></a>
-          </div>
-          <div class="col-lg-3 memberPage">
-            <a href="#"><img src="groupTrainingSession.jpg" style="margin-left:-10px;"></img></a>
-          </div>
-        </div>
-
-          <div class="row">
-            <div class="col-lg-3 memberPage" style="margin-left:-100px;margin-top:20px;margin-bottom:-170px">
-              <a href="#"><img src="updateTrainingRecord.jpg"></img></a>
+      <div class="row">
+        <div class="form-group">
+            <div class="col-xs-12 col-sm-9 registerForm">
+                <input type="text" style="height:70px" name="title" class=" form form-control input-lg" id="inputName" placeholder="TITLE">
             </div>
-          </div>
-
+        </div>
       </div>
 
+      <div class="row">
+            <div class="col-xs-12 col-sm-9 registerForm">
+                <input type="date" style="height:70px;" name="date" class=" form form-control input-lg" id="inputName" placeholder="dd/mm/yyyy">
+            </div>
+        </div>
+
+      <div class="row">
+            <div class="col-xs-12 col-sm-9 registerForm">
+                <input type="time" style="height:70px" name="time" class=" form form-control input-lg" id="inputName" placeholder="TIME">
+            </div>
+        </div>
+
+      <div class="row">
+            <div class="col-xs-12 col-sm-9 registerForm">
+                <input type="text" style="height:70px" name="fee" class=" form form-control input-lg" id="inputName" placeholder="FEE">
+            </div>
+        </div>
+
+        
+      </div>
+
+      <button type="button" class="signUpBtn">SIGN UP</button>
 
 
 
