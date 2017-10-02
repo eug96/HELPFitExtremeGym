@@ -1,39 +1,7 @@
 <html>
 
   <head>
-    <style>
-      div.container{
-        background-color: black;
-        width:auto;
-        height:125px;
-      }
-
-      div.footer{
-        background-color: black;
-        width:1520px;
-        height:125px;
-        margin: -8px;
-        bottom:0px;
-      }
-
-      div.button{
-        font-weight: bold;
-        font-family: 'Rockwell';
-        background-color: #C10000;
-        height:43px;
-        width:116px;
-        font-size: 16px;
-        color: white;
-        text-align: center;
-        padding: 10px;
-      }
-
-      div.image{
-        padding-top: 100px;
-        padding-bottom: 50px;
-        margin: -8px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
 
     <title>
         HELPFIT EXTREME GYM
@@ -54,39 +22,83 @@
     <script src="js/bootstrap.min.js"></script>
 
 
-      <div class="container">
+
+
+      <div class="container-fluid containerplus">
         <div class="row">
 
-          <div class"col-lg-3">
-            <img src="Logo.jpg"></img>
+          <div class"col-md-4">
+            <a href="home.html"><img src="Logo.jpg" style="position: absolute;"></a></img>
           </div>
 
-          <div class="col-lg-3 button">
-            LOGIN
+            </div>
           </div>
 
-          <div class="col-lg-3 button">
-            SIGN UP
+          <ul class ="nav navigation nav-tabs navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">SIGN UP</a>
+              <ul class="dropdown-menu">
+                <li><a href="signUpTrainer.html">AS TRAINER</a></li>
+                <li><a href="signUpMember.html">AS MEMBER</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class ="nav navigation nav-tabs navbar-right" style="margin-right: -15px;">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">LOGIN</a>
+              <ul class="dropdown-menu">
+                <li><a href="trainerLogin.html">AS TRAINER</a></li>
+                <li><a href="memberLogin.html">AS MEMBER</a></li>
+              </ul>
+            </li>
+          </ul>
+
+
+
+  <div class="container">
+    <div class="image">
+      <img src="Home.jpg" height= "551px" width="auto"></img>
+    </div>
+
+  </div>
+
+
+  <div class="container-fluid footer">
+    <div class="row">
+      <div class="col-md-1  icon" style="margin-top:33px;margin-left:615px">
+          <div class="icon"><a href=https://www.facebook.com/><img src = "facebook.png" height="55px" width="55px"></a></div>
           </div>
 
-        </div>
+          <div class="col-md-1  icon" style="margin-top:35px;margin-left:-66px">
+          <div class="icon"><a href=https://www.twitter.com/><img src = "twitter.png" height="50px" width="50px"></a></div>
+          </div>
+
+          <div class="col-md-1  icon" style="margin-top:35px;margin-left:-70px">
+          <div class="icon"><a href=https://www.google.com/><img src = "google.png" height="50px" width="50px"></a></div>
+          </div>
+
+          <div class="col-md-1  icon" style="margin-top:35px;margin-left:-70px">
+          <div class="icon"><a href=https://www.youtube.com/><img src = "youtube.png" height="50px" width="50px"></a></div>
+          </div>
+
+          <div class="col-md-1  icon" style="margin-top:33px;margin-left:-72px">
+          <div class="icon"><a href=https://www.instagram.com/><img src = "instagram.png" height="54px" width="54px"></a></div>
+          </div>
+
       </div>
 
-    <div class="image">
-      <img src="Home.jpg" height=600px width=1550px ></img>
-    </div>
-
-    <div class="footer">
-      <div class="col-lg-4 ">
-        <div style="padding: 40px 10px;">
-          <a href="https://google.com" class="btn btn-social-icon btn-google-plus"><span class="fa fa-google-plus"></span></a>
-          <a href="https://www.facebook.com" class="btn btn-social-icon btn-facebbok"><span class="fa fa-facebook"></span></a>
-          <a href="https://twitter.com" class="btn btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a>
-          <a href="https://youtube.com" class="btn btn-social-icon btn-youtube"><span class="fa fa-youtube"></span></a>
-        </div>
+      <div class="row">
+        <div class="col-md-4 footertext">
+          @2017 HELPFIT EXTREME GYM
         </div>
     </div>
 
+    </div>
+
+
+
+  </div>
 
   </body>
 
