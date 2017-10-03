@@ -47,30 +47,61 @@
           </ul>
 
 
-    <div class="container">
-      <h1><span style="margin-top:110px;left:-200px">WELCOME EUGENE</span></h1>
 
-        <div class="loginPage">
+  <div class="container">
+      <h3><span>WELCOME EUGENE! ENTER THE INFO TO CREATE A TRAINING SESSION</span></h3>
+
+        <div class="signUpPage">
           <img src="trainerLogin.jpg" height= "1015px" width="auto"></img>
         </div>
 
-        <div class="row">
-          <div class="col-lg-3 memberPage" style="margin-left:-100px;">
-            <a href="#"><img src="trainingHistory.jpg"></img></a>
-          </div>
-          <div class="col-lg-3 memberPage">
-            <a href="recordPersonalTrainingSession.html"><img src="personalTrainingSession.jpg"></img></a>
-          </div>
-          <div class="col-lg-3 memberPage">
-            <a href="recordGroupTrainingSession.html"><img src="groupTrainingSession.jpg" style="margin-left:-10px;"></img></a>
-          </div>
+      <div class="row">
+        <div class="form-group">
+            <div class="col-xs-12 col-sm-9 registerForm">
+                <input type="text" style="height:70px" name="title" class=" form form-control input-lg" id="inputTitle" placeholder="TITLE">
+            </div>
+        </div>
+      </div>
+
+      <div class="row">
+            <div class="col-xs-12 col-sm-9 registerForm">
+                <input type="date" style="height:70px;" name="date" class=" form form-control input-lg" id="inputName" placeholder="dd/mm/yyyy">
+            </div>
         </div>
 
-          <div class="row">
-            <div class="col-lg-3 memberPage" style="margin-left:-100px;margin-top:20px;margin-bottom:-170px">
-              <a href="#"><img src="updateTrainingRecord.jpg"></img></a>
+      <div class="row">
+            <div class="col-xs-12 col-sm-9 registerForm">
+                <input type="time" style="height:70px" name="time" class=" form form-control input-lg" id="inputTime" placeholder="TIME">
             </div>
+        </div>
+
+      <div class="row">
+            <div class="col-xs-12 col-sm-9 registerForm">
+                <input type="text" style="height:70px" name="maxParticipates" class=" form form-control input-lg" id="inputMaxParticipates" placeholder="MAXIMUM PARTICIPATES">
+            </div>
+        </div>
+
+        <select class="form-control listbox" id="level" style="width:470px;height:70px;font-size:20px;bottom:15px;">
+          <option>SELECT CLASS TYPE</option>
+          <option>SPORT</option>
+          <option>MMA</option>
+          <option>DANCE</option>
+        </select>
+
+        <select class="form-control listbox" id="level" style="color:#00e600;width:470px;height:70px;font-size:20px;bottom:-75px;">
+          <option>AVAILABLE</option>
+        </select>
+
+
+
+        <div class="row">
+          <div class="col-xs-3 col-md-4" style="margin-top:100px;margin-bottom:-100px;">
+            <button type="button" class="setting">CREATE</button>
           </div>
+          <div class="col-xs-3 col-md-4" style="margin-left:-130px;margin-top:100px;margin-bottom:-100px;">
+            <a href="trainerPage.html"><button type="button" class="setting">BACK</button></a>
+          </div>
+      </div>
 
       </div>
 

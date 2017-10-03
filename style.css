@@ -158,9 +158,14 @@ li.dropdown:hover> .dropdown-menu >li > a:hover, li.dropdown:hover> .dropdown-me
   background-color: #C10000;
 }
 
-div.member{
+div.signUpPage{
   margin-left: -190px;
   margin-bottom: -30px;
+}
+div.member{
+
+
+
 }
 
 h1{
@@ -249,5 +254,65 @@ overflow-y: hidden;
 }
 
 label{
+  color:black;
+}
+
+button.setting{
+  width: 195px;
+  height: 70px;
+  margin-left: 340px;
+  font-family: 'RockWell';
+  font-size: 23px;
+  margin-top:-350px;
+  color: white;
+  background-color: #C10000;
+  border-color: #C10000;
+  border-style: solid;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+button.setting:active{
+  background-color: white;
+  color:#C10000;
+  border-color: white;
+}
+
+.listbox{
+  background-color: white;
+  position: absolute;
+  bottom: 100px;
+  margin-left: 335px;
+}
+
+h3 span{
+  position: absolute;
+  color: white;
+  margin-left: 200px;
+  font-family: 'Rockwell';
+  font-size: 40px;
+  margin-top: 20px;
+  width: 780px;
+  text-align: justify;
+  margin-bottom: 50px;
+}
+
+.tableStyle{
+  font-size: 23px;
+  color: black;
+  background-color: white;
+
+}
+
+.wholeTable{
+  margin-top: -400px;
+}
+
+.wholeTable > tbody > tr >td{
+  color: white;
+  font-size: 18px;
+}
+
+.wholeTable >tbody > tr> a:hover{
   color:black;
 }

@@ -42,35 +42,84 @@
 
           <ul class ="nav navigation nav-tabs navbar-right" style="margin-right: -15px;">
             <li class="nav nav-tabs">
-              <a href="trainerSetting.html">SETTING</a>
+              <a href="memberSetting.html">SETTING</a>
             </li>
           </ul>
+
 
 
     <div class="container">
       <h1><span style="margin-top:110px;left:-200px">WELCOME EUGENE</span></h1>
 
         <div class="loginPage">
-          <img src="trainerLogin.jpg" height= "1015px" width="auto"></img>
+          <img src="memberLogin.jpg" height= "1015px" width="auto"></img>
         </div>
 
         <div class="row">
-          <div class="col-lg-3 memberPage" style="margin-left:-100px;">
-            <a href="#"><img src="trainingHistory.jpg"></img></a>
-          </div>
-          <div class="col-lg-3 memberPage">
-            <a href="recordPersonalTrainingSession.html"><img src="personalTrainingSession.jpg"></img></a>
-          </div>
-          <div class="col-lg-3 memberPage">
-            <a href="recordGroupTrainingSession.html"><img src="groupTrainingSession.jpg" style="margin-left:-10px;"></img></a>
+          <div class="col-md-12" style="margin-left:-100px;width:1400px;margin-bottom:370px">
+            <table class="table table-bordered wholetable">
+              <thead class="tableStyle">
+                <tr>
+                  <th>SESSION ID</th>
+                  <th>TITLE</th>
+                  <th>DATE</th>
+                  <th>TIME</th>
+                  <th>TYPE</th>
+                  <th>STATUS</th>
+                  <th>TRAINER</th>
+                  <th>TRAINER SPECIALTY</th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>BIT210</td>
+                  <td>MMA</td>
+                  <td>10/10/2017</td>
+                  <td>8:00pm</td>
+                  <td>GROUP(MMA)</td>
+                  <td>AVAILABLE</td>
+                  <td>EUGENE</td>
+                  <td>MMA</td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr>
+                  <td>BIT216</td>
+                  <td>DANCE</td>
+                  <td>20/10/2017</td>
+                  <td>8:00pm</td>
+                  <td>GROUP(DANCE)</td>
+                  <td>FULL</td>
+                  <td>JOE</td>
+                  <td>DANCE</td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr>
+                  <td>BGM208</td>
+                  <td>SPORT</td>
+                  <td>10/10/2017</td>
+                  <td>8:00pm</td>
+                  <td>PERSONAL</td>
+                  <td>NOT AVAILABLE</td>
+                  <td>JACK</td>
+                  <td>SPORT</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
-          <div class="row">
-            <div class="col-lg-3 memberPage" style="margin-left:-100px;margin-top:20px;margin-bottom:-170px">
-              <a href="#"><img src="updateTrainingRecord.jpg"></img></a>
-            </div>
+        <div class="row">
+          <div class="col-xs-3 col-md-4"  style="margin-top:-50px">
+            <button type="button" class="setting">ATTEND</button>
           </div>
+          <div class="col-xs-3 col-md-4" style="margin-left:250px;margin-top:-50px">
+            <a href="memberPage.html"><button type="button" class="setting">BACK</button></a>
+          </div>
+      </div>
 
       </div>
 
@@ -107,7 +156,6 @@
           @2017 HELPFIT EXTREME GYM
         </div>
     </div>
-
     </div>
 
   </body>
