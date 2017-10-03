@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Review Trainer</title>
+  <title>Update Training Session</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -55,9 +55,13 @@
 
 
 
-  <div id="reviewbgimg">
+  <div id="updatebgimg">
   <div class="container-fluid">
-    <!-- <img src="training.jpg" alt="Background" class="img-responsive"> -->
+
+    <!-- <div class="bgimg ">
+      <img src="training3.jpg" alt="Background" class="img-responsive">
+    </div> -->
+
   <div class="row" >
   <br/>
   <div class="col-xs-12 col-md-12">
@@ -69,19 +73,20 @@
 
   .<div class="row">
 
-  <div class="col-md-12">
+  <div class="col-xs-12 col-md-12">
     <table class="table table-responsive table-bordered viewmember">
 
 
       <tr>
-      <th class="col-md-1">Session ID</th>
-      <th class="col-md-3">Title</th>
-      <th class="col-md-1">Date</th>
-      <th class="col-md-1">Time</th>
-      <th class="col-md-1">Type</th>
-      <th class="col-md-1">Status</th>
-      <th class="col-md-3">Trainer</th>
-      <th class="col-md-1">Trainer's Specialty</th>
+      <th class="col-md-1 col-xs-1">Session ID</th>
+      <th class="col-md-2 col-xs-1">Title</th>
+      <th class="col-md-1 col-xs-1">Date</th>
+      <th class="col-md-1 col-xs-1">Time</th>
+      <th class="col-md-1 col-xs-1">Fee</th>
+      <th class="col-md-1 col-xs-1">Status</th>
+      <th class="col-md-2 col-xs-2">Max Participation</th>
+      <th class="col-md-2 col-xs-2">Number Of Participants</th>
+      <th class="col-md-1 col-xs-1">Type</th>
       </tr>
 
       <tr>
@@ -89,30 +94,32 @@
         <td>Sport</td>
         <td>20/9/2017</td>
         <td>8PM</td>
+        <td>RM 50</td>
+        <td>Full</td>
+        <td>15</td>
+        <td>10</td>
         <td>Group (Sport)</td>
-        <td>Available</td>
-        <td>Ng Wooi Jing</td>
-        <td>Sport</td>
       </tr>
       <tr>
         <td>BIT 216</td>
         <td>Mass Gainer</td>
         <td>15/9/2017</td>
         <td>9PM</td>
+        <td>RM 80</td>
+        <td>Available</td>
+        <td>1</td>
+        <td>0</td>
         <td>Personal</td>
-        <td>Cancelled</td>
-        <td>Peter Griffin</td>
-        <td>Mass Gainer</td>
       </tr>
     </table>
   </div>
 
   <div class="row">
-    <div class=" col-md-push-5 col-md-offset-7 col-sm-push-7 col-sm-offset-2">
+    <div class=" col-md-push-5 col-md-offset-7 col-sm-push-4 col-sm-offset-2">
       <a href="#" class="btn navButton">Back</a>
       <!-- <a href="#" class="navButton"><span id="revieworupdate">Review Trainer</span></a> -->
       <a class="btn navButton" data-toggle="modal" data-target="#myModalHorizontal">
-          Review Trainer
+          Update Training Session
       </a>
       <!-- Modal -->
       <div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog"
@@ -127,7 +134,7 @@
                              <span class="sr-only">Close</span>
                       </button>
                       <h4 class="modal-title" id="myModalLabel">
-                          Review Trainer
+                          Update Training Session
                       </h4>
                   </div>
 
@@ -137,46 +144,47 @@
                       <form class="form-horizontal" role="form">
                         <div class="form-group">
                           <label  class="col-sm-2 control-label"
-                                    for="fee">Fee: RM<span id="fee">80</span></label>
-                          <!-- <div class="col-sm-10">
-                              <input type="email" class="form-control"
-                              id="inputDate" placeholder="Date"/>
-                          </div> -->
-                        </div>
-                        <div class="form-group">
-                          <label class="col-sm-2 control-label"
-                                for="note" >Notes: <span id="note">Be punctual</span></label>
-                          <!-- <div class="col-sm-10">
-                              <input type="date" class="form-control"
-                                  id="inputDate" placeholder="Time"/>
-                          </div> -->
-                        </div>
-                        <div class="form-group">
-                          <label class="col-sm-2 control-label"
-                                for="inputRating" >Rating</label>
+                                    for="inputDate">Date</label>
                           <div class="col-sm-10">
-                              <label class="radio-inline">
-                                <input type="radio" name="rating" id="1" value="1"> 1
-                              </label>
-                              <label class="radio-inline">
-                                <input type="radio" name="rating" id="2" value="2"> 2
-                              </label>
-                              <label class="radio-inline">
-                                <input type="radio" name="rating" id="3" value="3"> 3
-                              </label>
-                              <label class="radio-inline">
-                                <input type="radio" name="rating" id="4" value="4"> 4
-                              </label>
-                              <label class="radio-inline">
-                                <input type="radio" name="rating" id="5" value="5"> 5
-                              </label>
+                              <input type="date" class="form-control"
+                              id="inputDate" placeholder="Date" required/>
                           </div>
                         </div>
                         <div class="form-group">
                           <label class="col-sm-2 control-label"
-                                for="textComment" >Comment:</label>
+                                for="inputTime" >Time</label>
                           <div class="col-sm-10">
-                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                              <input type="date" class="form-control"
+                                  id="inputDate" placeholder="Time" required/>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label"
+                                for="inputFee" >Fee</label>
+                          <div class="col-sm-10">
+                              <input type="number" class="form-control"
+                                  id="inputFee" placeholder="Fee" required/>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label"
+                                for="selClass" >Class Type</label>
+                          <div class="col-sm-10">
+                            <select class="form-control" id="selClass" required>
+                              <option>Personal</option>
+                              <option>Group</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label"
+                                for="selStatus" >Status</label>
+                          <div class="col-sm-10">
+                            <select class="form-control" id="selStatus">
+                            <option value="Available">Available</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Cancelled">Cancelled</option>
+                          </select>
                           </div>
                         </div>
                       </form>
@@ -190,7 +198,7 @@
                                   Close
                       </button>
                       <button type="submit" class="btn btn-primary">
-                          Submit
+                          Update
                       </button>
                   </div>
               </div>
