@@ -177,6 +177,20 @@ h3 span{
   margin-bottom: 50px;
 }
 
-thead.tableStyle>tr>a{
-  font-size: 50px;
+.tableStyle{
+  font-size: 23px;
+  color: white;
+}
+
+.wholeTable{
+  margin-top: -400px;
+}
+
+.wholeTable > tbody > tr >td{
+  color: white;
+  font-size: 18px;
+}
+
+.wholeTable >tbody > tr> a:hover{
+  color:black;
 }
