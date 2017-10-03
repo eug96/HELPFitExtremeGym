@@ -76,11 +76,6 @@ li.dropdown:hover> .dropdown-menu >li > a:hover{
 
 }
 
-li.dropdown:hover> .dropdown-menu >li > a:hover, li.dropdown:hover>
-.dropdown-menu >li > a:focus{
-  background-color: #C10000;
-}
-
 div.signUpPage{
   margin-left: -190px;
   margin-bottom: -370px;
@@ -157,6 +152,12 @@ button.setting{
   font-weight: bold;
 }
 
+button.setting:active{
+  background-color: white;
+  color:#C10000;
+  border-color: white;
+}
+
 .listbox{
   background-color: white;
   position: absolute;
@@ -174,4 +175,8 @@ h3 span{
   width: 780px;
   text-align: justify;
   margin-bottom: 50px;
+}
+
+thead.tableStyle>tr>a{
+  font-size: 50px;
 }
