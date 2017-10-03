@@ -179,7 +179,9 @@ h3 span{
 
 .tableStyle{
   font-size: 23px;
-  color: white;
+  color: black;
+  background-color: white;
+
 }
 
 .wholeTable{
