@@ -198,13 +198,6 @@ button.setting:active{
   border-color: white;
 }
 
-.listbox{
-  background-color: white;
-  position: absolute;
-  bottom: 100px;
-  margin-left: 335px;
-}
-
 h3 span{
   position: absolute;
   color: white;
