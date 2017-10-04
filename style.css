@@ -130,16 +130,14 @@ div.header{
   font-family: 'Rockwell';
 }
 
-div.registerForm{
-  width: 500px;
-  margin-left:335px;
-  margin-top: 20px;
-  bottom: 480px;
-}
-
 div.loginForm{
   width: 500px;
   margin-bottom: 5%;
+}
+
+div.recordForm{
+  width: 500px;
+  margin-bottom: 1%;
 }
 
 div.settingForm{
@@ -199,15 +197,10 @@ button.setting:active{
 }
 
 h3 span{
-  position: absolute;
   color: white;
-  margin-left: 200px;
   font-family: 'Rockwell';
   font-size: 40px;
   margin-top: 20px;
-  width: 780px;
-  text-align: justify;
-  margin-bottom: 50px;
 }
 
 .tableStyle{

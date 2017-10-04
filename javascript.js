@@ -112,3 +112,28 @@ function AttendTrainingSession(){
   alert("You Attended " + trainingSession.value + " Training Session");
   location.replace("memberPage.html");
 }
+
+function recordGroupTraningSession(){
+  var title = document.getElementById('inputTitle');
+  var maxParticipates = document.getElementById('inputMaxParticipates');
+  var classType = document.getElementById('classType');
+
+  if(title.value.length==0){
+    alert("Please Enter the Title of the Training Session");
+    return false;
+  }
+
+  else if(maxParticipates.value.length==0){
+    alert("Please Enter the Maximum Number of" +
+    " Participants of the Training Session");
+    return false;
+  }
+
+  else if(classType.value=="SELECT CLASS TYPE"){
+    alert("Please Select the Class Type of the Training Session");
+    return false;
+  }
+
+  location.replace("trainerPage.html")
+  alert("Group Training Session has Been Created");
+}
