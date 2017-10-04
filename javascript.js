@@ -12,7 +12,7 @@ function MemberLogin() {
       return false;
     }
 
-    location.replace("memberPage.html")
+    location.replace("memberPage.html");
 
 }
 
@@ -30,7 +30,7 @@ function TrainerLogin() {
       return false;
     }
 
-    location.replace("trainerPage.html")
+    location.replace("trainerPage.html");
 }
 
 function SignUpTrainer(){
@@ -95,7 +95,7 @@ $(".btn").mouseup(function(){
     $(this).blur();
 })
 
-function updateValidation(){
+function UpdateValidation(){
   var date = document.getElementById('inputDate');
   var time = document.getElementById('inputTime');
   var fee = document.getElementById('inputFee');
