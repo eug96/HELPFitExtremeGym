@@ -186,7 +186,7 @@ function recordGroupTraningSession(){
     return false;
   }
 
-  location.replace("trainerPage.html")
+  location.replace("trainerPage.html");
   alert("Group Training Session has Been Created");
 }
 
@@ -210,7 +210,7 @@ function recordPersonalTraningSession(){
     return false;
   }
 
-  location.replace("trainerPage.html")
+  location.replace("trainerPage.html");
   alert("Personal Training Session has Been Created");
 }
 =======
