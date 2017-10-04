@@ -127,7 +127,7 @@ div.trainerPage{
 div.header{
   color: white;
   font-family: 'Rockwell';
-  margin-bottom: 10%;
+  margin-bottom: 3%;
 }
 
 div.registerForm{
@@ -140,6 +140,11 @@ div.registerForm{
 div.loginForm{
   width: 500px;
   margin-bottom: 5%;
+}
+
+div.settingForm{
+  width: 500px;
+  margin-bottom: 2%;
 }
 
 button.signUpBtn{
@@ -168,19 +173,23 @@ div.memberHome{
   margin-top: -5%;
 }
 
+div.trainerHome{
+  margin-right: 10%;
+  margin-top: -5%;
+}
+
 button.setting{
-  width: 195px;
+  width: 220px;
   height: 70px;
-  margin-left: 340px;
   font-family: 'RockWell';
   font-size: 23px;
-  margin-top:-350px;
   color: white;
   background-color: #C10000;
   border-color: #C10000;
   border-style: solid;
   letter-spacing: 3px;
   font-weight: bold;
+  border-radius: 10px;
 }
 
 button.setting:active{

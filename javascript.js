@@ -59,7 +59,7 @@ function SignUpTrainer(){
     return false;
   }
 
-  location.replace("TrainerLogin.html")
+  location.replace("trainerLogin.html");
 }
 
 function SignUpMember(){
@@ -88,5 +88,10 @@ function SignUpMember(){
     return false;
   }
 
-  location.replace("MemberLogin.html")
+  location.replace("memberLogin.html");
+}
+
+function SettingTrainer(){
+  location.replace("trainerPage.html");
+  alert("Your Data Has Been Saved");
 }

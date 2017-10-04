@@ -17,114 +17,124 @@
 
   <body>
     <!--Include JQuery: necessary for Bootstrap plugins-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
     <!--Include bootstrap library as needed-->
     <script src="js/bootstrap.min.js"></script>
-
-
-
+    <script src="javascript.js"></script>
 
       <div class="container-fluid containerplus">
         <div class="row">
-
           <div class"col-md-4">
             <a href="home.html"><img src="Logo.jpg" style="position: absolute;"></a></img>
           </div>
-
-            </div>
-          </div>
-
-          <ul class ="nav navigation nav-tabs navbar-right">
-            <li class="nav nav-tabs">
-              <a href="home.html">LOG OUT</a>
-            </li>
-          </ul>
-
-          <ul class ="nav navigation nav-tabs navbar-right" style="margin-right: -15px;">
-            <li class="nav nav-tabs">
-              <a href="trainerSetting.html">SETTING</a>
-            </li>
-          </ul>
-
-
-
-          <div class="container">
-              <h1><span style="margin-left:325px">ENTER NEW INFO</span></h1>
-
-                <div class="signUpPage">
-                  <img src="trainerLogin.jpg" height= "1015px" width="auto"></img>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-md-9 registerForm">
-                        <input type="text" style="height:70px;" name="name" class=" form form-control input-lg" id="inputName" placeholder="NAME">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-md-9 registerForm">
-                        <input type="email" style="height:70px" name="email" class=" form form-control input-lg" id="inputName" placeholder="EMAIL">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-md-9 registerForm">
-                        <input type="password" style="height:70px" name="password" class=" form form-control input-lg" id="inputName" placeholder="PASSWORD">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-md-9 registerForm">
-                        <input type="text" style="height:70px" name="specialty" class=" form form-control input-lg" id="inputName" placeholder="SPECIALTY">
-                    </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-xs-3 col-md-4"  style="margin-top:-50px">
-                    <button type="button" class="setting">SAVE</button>
-                  </div>
-                  <div class="col-xs-3 col-md-4" style="margin-left:250px;margin-top:-50px">
-                    <a href="trainerPage.html"><button type="button" class="setting">CANCEL</button></a>
-                  </div>
-              </div>
-            </div>
-
-
-
-
-
-
-  <div class="container-fluid footer">
-    <div class="row">
-      <div class="col-md-1  icon" style="margin-top:33px;margin-left:615px">
-          <div class="icon"><a href=https://www.facebook.com/><img src = "facebook.png" height="55px" width="55px"></a></div>
-          </div>
-
-          <div class="col-md-1  icon" style="margin-top:35px;margin-left:-66px">
-          <div class="icon"><a href=https://www.twitter.com/><img src = "twitter.png" height="50px" width="50px"></a></div>
-          </div>
-
-          <div class="col-md-1  icon" style="margin-top:35px;margin-left:-70px">
-          <div class="icon"><a href=https://www.google.com/><img src = "google.png" height="50px" width="50px"></a></div>
-          </div>
-
-          <div class="col-md-1  icon" style="margin-top:35px;margin-left:-70px">
-          <div class="icon"><a href=https://www.youtube.com/><img src = "youtube.png" height="50px" width="50px"></a></div>
-          </div>
-
-          <div class="col-md-1  icon" style="margin-top:33px;margin-left:-72px">
-          <div class="icon"><a href=https://www.instagram.com/><img src = "instagram.png" height="54px" width="54px"></a></div>
-          </div>
-
+        </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-4 footertext">
-          @2017 HELPFIT EXTREME GYM
-        </div>
-    </div>
+      <ul class ="nav navigation nav-tabs navbar-right">
+        <li class="nav nav-tabs">
+          <a href="home.html">LOG OUT</a>
+        </li>
+      </ul>
 
-    </div>
+      <ul class ="nav navigation nav-tabs navbar-right" style="margin-right: -15px;">
+        <li class="nav nav-tabs">
+          <a href="trainerSetting.html">SETTING</a>
+        </li>
+      </ul>
+
+
+
+      <div class="trainerPage">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-md-12 header">
+              <h1><span>ENTER THE INFORMATION THAT YOU WANT TO CHANGE</span></h1>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
+              <input type="text" style="height:70px;" name="name"
+              class=" form form-control input-lg" id="inputName"
+              placeholder="NAME">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
+              <input type="email" style="height:70px" name="email"
+              class=" form form-control input-lg" id="inputEmail"
+              placeholder="EMAIL">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
+              <input type="password" style="height:70px" name="password"
+               class=" form form-control input-lg" id="inputPassword"
+               placeholder="PASSWORD">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
+              <input type="text" style="height:70px" name="specialty"
+              class=" form form-control input-lg" id="inputSpecialty"
+              placeholder="SPECIALTY">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-3 col-md-2 col-md-offset-4">
+              <button type="button" class="setting" style="margin-right:20px"onclick="SettingTrainer()">
+                SAVE</button>
+            </div>
+            <div class="col-xs-3 col-md-2">
+              <a href="trainerPage.html">
+                <button type="button" class="setting">CANCEL</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid footer">
+
+        <div class="row">
+          <div class="col-xs-1 col-md-1 col-xs-offset-5 icon"
+          style="margin-top:33px">
+            <div class="icon"><a href=https://www.facebook.com/>
+            <img src = "facebook.png" height="55px" width="55px"></a></div>
+          </div>
+
+          <div class="col-xs-1 col-md-1  icon" style="margin-top:35px">
+            <div class="icon"><a href=https://www.twitter.com/>
+            <img src = "twitter.png" height="50px" width="50px"></a></div>
+          </div>
+
+          <div class="col-xs-1 col-md-1  icon" style="margin-top:35px">
+            <div class="icon"><a href=https://www.google.com/>
+            <img src = "google.png" height="50px" width="50px"></a></div>
+          </div>
+
+          <div class="col-xs-1 col-md-1  icon" style="margin-top:35px">
+            <div class="icon"><a href=https://www.youtube.com/>
+            <img src = "youtube.png" height="50px" width="50px"></a></div>
+          </div>
+
+          <div class="col-xs-1 col-md-1  icon" style="margin-top:33px">
+            <div class="icon"><a href=https://www.instagram.com/>
+            <img src = "instagram.png" height="54px" width="54px"></a></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-md-4 footertext">
+            @2017 HELPFIT EXTREME GYM
+          </div>
+        </div>
+
+      </div>
 
   </body>
 
