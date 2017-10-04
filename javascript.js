@@ -109,7 +109,7 @@ function SettingMember(){
 }
 
 function updateValidation(){
-  
+
   var date = document.getElementById('inputDate');
   var time = document.getElementById('inputTime');
   var fee = document.getElementById('inputFee');
@@ -169,4 +169,53 @@ function AttendTrainingSession(){
 
   alert("You Attended " + trainingSession.value + " Training Session");
   location.replace("memberPage.html");
+}
+
+function recordGroupTraningSession(){
+  var title = document.getElementById('inputTitle');
+  var maxParticipates = document.getElementById('inputMaxParticipates');
+  var classType = document.getElementById('classType');
+
+  if(title.value.length==0){
+    alert("Please Enter the Title of the Training Session");
+    return false;
+  }
+
+  else if(maxParticipates.value.length==0){
+    alert("Please Enter the Maximum Number of" +
+    " Participants of the Training Session");
+    return false;
+  }
+
+  else if(classType.value=="SELECT CLASS TYPE"){
+    alert("Please Select the Class Type of the Training Session");
+    return false;
+  }
+
+  location.replace("trainerPage.html")
+  alert("Group Training Session has Been Created");
+}
+
+function recordPersonalTraningSession(){
+  var title = document.getElementById('inputTitle');
+  var fee = document.getElementById('inputFee');
+  var notes = document.getElementById('inputNotes');
+
+  if(title.value.length==0){
+    alert("Please Enter the Title of the Training Session");
+    return false;
+  }
+
+  else if(fee.value.length==0){
+    alert("Please Enter the Fee");
+    return false;
+  }
+
+  else if(notes.value.length==0){
+    alert("Please Enter Notes");
+    return false;
+  }
+
+  location.replace("trainerPage.html")
+  alert("Personal Training Session has Been Created");
 }
