@@ -88,25 +88,9 @@ function SignUpMember(){
     return false;
   }
 
-  location.replace("MemberLogin.html")
+  location.replace("MemberLogin.html");
 }
 
-$(".btn").mouseup(function(){
-    $(this).blur();
-})
-
-<<<<<<< HEAD
-$('#updateModalHorizontal').on('shown.bs.modal', function () {
-  $.getScript('javascript.js');
-});
-
-$('#updateModalHorizontal').on('shown.bs.modal', function () {
-  //then put your script here
-  alert("Test");
-});
-
-function updateValidation(){
-=======
 function UpdateValidation(){
 
   var date = document.getElementById('inputDate');
@@ -115,50 +99,45 @@ function UpdateValidation(){
   var valclass = document.getElementById('selClass');
   var status = document.getElementById('selStatus');
 
-  if (inputDate.value.length==0) {
-      alert("Please Enter Date");
+  if (date.value.length==0) {
+      alert("Please Enter Date!");
       return false;
   }
 
-  else if (inputTime.value.length==0) {
-    alert("Please Enter Time");
+  else if (time.value.length==0) {
+    alert("Please Enter Time!");
     return false;
   }
 
+  else if (fee.value.length==0) {
+    alert("Please Enter Fee!");
+    return false;
+  }
+
+  else if (valClass.value.length==0) {
+    alert("Please Select a Class!");
+    return false;
+  }
+
+  else if (status.value.length==0) {
+    alert("Please Enter Status!");
+    return false;
+  }
+
+  location.replace("updatetrainer.html");
 }
 
-// $(function() {
-//
-//   $("#updateModalHorizontal").validate({
-//     rules: {
-//       inputDate: {
-//         required: true,
-//
-//       },
-//       action: "required"
-//     },
-//     messages: {
-//       inputDate: {
-//         required: "Please enter date",
-//
-//       },
-//       action: "Please enter date"
-//     }
-//   });
-// });
-//
-// $('#updateModalHorizontal').on('submit', function(e) {
-//   var date = $('#inputDate');
-//
-//   // Check if there is an entered value
-//   if(!inputDate.val()) {
-//     // Add errors highlight
-//     inputDate.closest('.form-group').removeClass('has-success').addClass('has-error');
-//
-//     // Stop submission of the form
-//     e.preventDefault();
-//   } else {
-//     // Remove the errors highlight
-//     inputDate.closest('.form-group').removeClass('has-error').addClass('has-success');
-//   }
-// });
+function reviewValidation(){
+  var radios = document.getElementsByName("rating");
+
+for (var i = 0, len = radios.length; i < len; i++) {
+     if (radios[i].checked) {
+         return true;
+     }
+}
+
+alert("Please Select a Rating!");
+return false;
+
+  location.replace("reviewtrainer.html");
+}
