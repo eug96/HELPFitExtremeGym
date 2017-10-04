@@ -124,10 +124,10 @@ div.trainerPage{
   margin: 0;
   padding: 0;
 }
+
 div.header{
   color: white;
   font-family: 'Rockwell';
-  margin-bottom: 3%;
 }
 
 div.registerForm{
@@ -211,15 +211,21 @@ h3 span{
 }
 
 .tableStyle{
-  font-size: 23px;
+  font-size: 18px;
   color: black;
   background-color: white;
-  border-color: black;
+  table-layout: fixed;
+}
+
+.table-bordered{
+  background-color: white;
+  border-color: color:black;
+  border-style: solid;
 }
 
 .table-bordered > tbody > tr >td{
-  color: white;
-  font-size: 18px;
+  color: black;
+  font-size: 15px;
 }
 
 .bgimg{
@@ -300,14 +306,12 @@ span.welcome{
   color: white;
 }
 
-
 table.viewmember{
   background-color: white;
   font: black 16px;
   border-spacing: 15px;
   table-layout: fixed;
   color: black;
-
 }
 
 .navButton {

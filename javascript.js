@@ -100,3 +100,15 @@ function SettingMember(){
   location.replace("memberPage.html");
   alert("Your Data Has Been Saved");
 }
+
+function AttendTrainingSession(){
+  var trainingSession = document.getElementById('chooseTrainingSession')
+
+  if(trainingSession.value== "CHOOSE TRAINING SESSION"){
+    alert("Please Select a Training Session to Attend");
+    return false;
+  }
+
+  alert("You Attended " + trainingSession.value + " Training Session");
+  location.replace("memberPage.html");
+}

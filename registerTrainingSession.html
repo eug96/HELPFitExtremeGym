@@ -49,29 +49,25 @@
       <div class="memberPage">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-xs-12 col-md-12 header">
+            <div class="col-xs-12 col-md-12 header" style="margin-bottom:1%">
               <h1><span>WELCOME EUGENE</span></h1>
             </div>
           </div>
 
         <div class="row">
-          <div class="col-xs-12 col-md-12"
-          style="width:1400px">
-            <table class="table table-bordered">
-              <thead class="tableStyle">
+          <div class="col-xs-12 col-md-12">
+            <table class="table table-bordered tableStyle">
                 <tr>
-                  <th>SESSION ID</th>
-                  <th>TITLE</th>
-                  <th>DATE</th>
-                  <th>TIME</th>
-                  <th>TYPE</th>
-                  <th>STATUS</th>
-                  <th>TRAINER</th>
-                  <th>TRAINER SPECIALTY</th>
+                  <th class="col-md-1 col-xs-1">SESSION ID</th>
+                  <th class="col-md-1 col-xs-1">TITLE</th>
+                  <th class="col-md-1 col-xs-1">DATE</th>
+                  <th class="col-md-1 col-xs-1">TIME</th>
+                  <th class="col-md-1 col-xs-1">TYPE</th>
+                  <th class="col-md-1 col-xs-1">STATUS</th>
+                  <th class="col-md-1 col-xs-1">TRAINER</th>
+                  <th class="col-md-2 col-xs-2">TRAINER SPECIALTY</th>
                 </tr>
-              </thead>
 
-              <tbody>
                 <tr>
                   <td>BIT210</td>
                   <td>MMA</td>
@@ -82,9 +78,7 @@
                   <td>EUGENE</td>
                   <td>MMA</td>
                 </tr>
-              </tbody>
 
-              <tbody>
                 <tr>
                   <td>BIT216</td>
                   <td>DANCE</td>
@@ -95,9 +89,7 @@
                   <td>JOE</td>
                   <td>DANCE</td>
                 </tr>
-              </tbody>
 
-              <tbody>
                 <tr>
                   <td>BGM208</td>
                   <td>SPORT</td>
@@ -108,18 +100,31 @@
                   <td>JACK</td>
                   <td>SPORT</td>
                 </tr>
-              </tbody>
+
             </table>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-xs-3 col-md-2 col-md-offset-4"
-          style="margin-right:0.8%">
-            <button type="button" class="setting">ATTEND</button>
+          <div class="col-xs-12 col-md-12">
+            <select class="form-control" id="chooseTrainingSession"
+             style="width:310px;height:40px;font-size: 18px;">
+              <option>CHOOSE TRAINING SESSION</option>
+              <option>BIT210</option>
+              <option>BIT216</option>
+              <option>BGM208</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-4 col-md-1 col-md-offset-8"
+          style="margin-right:8.5%;margin-top:2%">
+            <button type="button" class="setting"
+            onclick="AttendTrainingSession()">ATTEND</button>
           </div>
 
-          <div class="col-xs-3 col-md-2">
+          <div class="col-xs-4 col-md-1" style="margin-top:2%">
             <a href="memberPage.html">
               <button type="button" class="setting">BACK</button></a>
           </div>
