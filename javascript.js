@@ -95,11 +95,20 @@ $(".btn").mouseup(function(){
     $(this).blur();
 })
 
+$('#updateModalHorizontal').on('shown.bs.modal', function () {
+  $.getScript('javascript.js');
+});
+
+$('#updateModalHorizontal').on('shown.bs.modal', function () {
+  //then put your script here
+  alert("Test");
+});
+
 function updateValidation(){
   var date = document.getElementById('inputDate');
   var time = document.getElementById('inputTime');
   var fee = document.getElementById('inputFee');
-  var class = document.getElementById('selClass');
+  var valclass = document.getElementById('selClass');
   var status = document.getElementById('selStatus');
 
   if (inputDate.value.length==0) {
