@@ -189,6 +189,30 @@ function recordGroupTraningSession(){
   location.replace("trainerPage.html")
   alert("Group Training Session has Been Created");
 }
+
+function recordPersonalTraningSession(){
+  var title = document.getElementById('inputTitle');
+  var fee = document.getElementById('inputFee');
+  var notes = document.getElementById('inputNotes');
+
+  if(title.value.length==0){
+    alert("Please Enter the Title of the Training Session");
+    return false;
+  }
+
+  else if(fee.value.length==0){
+    alert("Please Enter the Fee");
+    return false;
+  }
+
+  else if(notes.value.length==0){
+    alert("Please Enter Notes");
+    return false;
+  }
+
+  location.replace("trainerPage.html")
+  alert("Personal Training Session has Been Created");
+}
 =======
 >>>>>>> b590becd73be5394e535930d419fc68799d36da7
 >>>>>>> a39a9e6a57990ea36a3c129d9bfaf9fb7c53e474
