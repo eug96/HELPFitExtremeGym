@@ -17,60 +17,57 @@
 
   <body>
     <!--Include JQuery: necessary for Bootstrap plugins-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
     <!--Include bootstrap library as needed-->
     <script src="js/bootstrap.min.js"></script>
-
-
-
+    <script src="javascript.js"></script>
 
       <div class="container-fluid containerplus">
         <div class="row">
-
           <div class"col-md-4">
-            <a href="home.html"><img src="Logo.jpg" style="position: absolute;"></a></img>
+            <a href="home.html"><img src="Logo.jpg" style="position: absolute;">
+            </a></img>
           </div>
+        </div>
+      </div>
 
+      <ul class ="nav navigation nav-tabs navbar-right">
+        <li class="nav nav-tabs">
+          <a href="home.html">LOG OUT</a>
+        </li>
+      </ul>
+
+      <ul class ="nav navigation nav-tabs navbar-right"
+      style="margin-right:-15px;">
+        <li class="nav nav-tabs">
+          <a href="memberSetting.html">SETTING</a>
+        </li>
+      </ul>
+
+      <div class="memberPage">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-md-12 header" style="margin-bottom:1%">
+              <h1><span>WELCOME EUGENE</span></h1>
             </div>
           </div>
 
-          <ul class ="nav navigation nav-tabs navbar-right">
-            <li class="nav nav-tabs">
-              <a href="home.html">LOG OUT</a>
-            </li>
-          </ul>
-
-          <ul class ="nav navigation nav-tabs navbar-right" style="margin-right: -15px;">
-            <li class="nav nav-tabs">
-              <a href="memberSetting.html">SETTING</a>
-            </li>
-          </ul>
-
-
-
-    <div class="container">
-      <h1><span style="margin-top:110px;left:-200px">WELCOME EUGENE</span></h1>
-
-        <div class="loginPage">
-          <img src="memberLogin.jpg" height= "1015px" width="auto"></img>
-        </div>
-
         <div class="row">
-          <div class="col-md-12" style="margin-left:-100px;width:1400px;margin-bottom:370px">
-            <table class="table table-bordered wholetable">
-              <thead class="tableStyle">
+          <div class="col-xs-12 col-md-12">
+            <table class="table table-bordered tableStyle">
                 <tr>
-                  <th>SESSION ID</th>
-                  <th>TITLE</th>
-                  <th>DATE</th>
-                  <th>TIME</th>
-                  <th>TYPE</th>
-                  <th>STATUS</th>
-                  <th>TRAINER</th>
-                  <th>TRAINER SPECIALTY</th>
-              </tr>
-              </thead>
-              <tbody>
+                  <th class="col-md-1 col-xs-1">SESSION ID</th>
+                  <th class="col-md-1 col-xs-1">TITLE</th>
+                  <th class="col-md-1 col-xs-1">DATE</th>
+                  <th class="col-md-1 col-xs-1">TIME</th>
+                  <th class="col-md-1 col-xs-1">TYPE</th>
+                  <th class="col-md-1 col-xs-1">STATUS</th>
+                  <th class="col-md-1 col-xs-1">TRAINER</th>
+                  <th class="col-md-2 col-xs-2">TRAINER SPECIALTY</th>
+                </tr>
+
                 <tr>
                   <td>BIT210</td>
                   <td>MMA</td>
@@ -81,9 +78,7 @@
                   <td>EUGENE</td>
                   <td>MMA</td>
                 </tr>
-              </tbody>
 
-              <tbody>
                 <tr>
                   <td>BIT216</td>
                   <td>DANCE</td>
@@ -94,9 +89,7 @@
                   <td>JOE</td>
                   <td>DANCE</td>
                 </tr>
-              </tbody>
 
-              <tbody>
                 <tr>
                   <td>BGM208</td>
                   <td>SPORT</td>
@@ -107,56 +100,77 @@
                   <td>JACK</td>
                   <td>SPORT</td>
                 </tr>
-              </tbody>
+
             </table>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-xs-3 col-md-4"  style="margin-top:-50px">
-            <button type="button" class="setting">ATTEND</button>
+          <div class="col-xs-12 col-md-12">
+            <select class="form-control" id="chooseTrainingSession"
+             style="width:310px;height:40px;font-size: 18px;">
+              <option>CHOOSE TRAINING SESSION</option>
+              <option>BIT210</option>
+              <option>BIT216</option>
+              <option>BGM208</option>
+            </select>
           </div>
-          <div class="col-xs-3 col-md-4" style="margin-left:250px;margin-top:-50px">
-            <a href="memberPage.html"><button type="button" class="setting">BACK</button></a>
-          </div>
-      </div>
-
-      </div>
-
-
-
-
-
-  <div class="container-fluid footer">
-    <div class="row">
-      <div class="col-md-1  icon" style="margin-top:33px;margin-left:615px">
-          <div class="icon"><a href=https://www.facebook.com/><img src = "facebook.png" height="55px" width="55px"></a></div>
-          </div>
-
-          <div class="col-md-1  icon" style="margin-top:35px;margin-left:-66px">
-          <div class="icon"><a href=https://www.twitter.com/><img src = "twitter.png" height="50px" width="50px"></a></div>
-          </div>
-
-          <div class="col-md-1  icon" style="margin-top:35px;margin-left:-70px">
-          <div class="icon"><a href=https://www.google.com/><img src = "google.png" height="50px" width="50px"></a></div>
-          </div>
-
-          <div class="col-md-1  icon" style="margin-top:35px;margin-left:-70px">
-          <div class="icon"><a href=https://www.youtube.com/><img src = "youtube.png" height="50px" width="50px"></a></div>
-          </div>
-
-          <div class="col-md-1  icon" style="margin-top:33px;margin-left:-72px">
-          <div class="icon"><a href=https://www.instagram.com/><img src = "instagram.png" height="54px" width="54px"></a></div>
-          </div>
-
-      </div>
-
-      <div class="row">
-        <div class="col-md-4 footertext">
-          @2017 HELPFIT EXTREME GYM
         </div>
+
+        <div class="row">
+          <div class="col-xs-4 col-md-1 col-md-offset-8"
+          style="margin-right:8.5%;margin-top:2%">
+            <button type="button" class="setting"
+            onclick="AttendTrainingSession()">ATTEND</button>
+          </div>
+
+          <div class="col-xs-4 col-md-1" style="margin-top:2%">
+            <a href="memberPage.html">
+              <button type="button" class="setting">BACK</button></a>
+          </div>
+      </div>
+
+      </div>
     </div>
-    </div>
+
+
+
+
+      <div class="container-fluid footer">
+        <div class="row">
+          <div class="col-xs-1 col-md-1 col-xs-offset-5 icon"
+            style="margin-top:33px">
+              <div class="icon"><a href=https://www.facebook.com/>
+              <img src = "facebook.png" height="55px" width="55px"></a></div>
+            </div>
+
+            <div class="col-xs-1 col-md-1  icon" style="margin-top:35px">
+              <div class="icon"><a href=https://www.twitter.com/>
+              <img src = "twitter.png" height="50px" width="50px"></a></div>
+            </div>
+
+            <div class="col-xs-1 col-md-1  icon" style="margin-top:35px">
+              <div class="icon"><a href=https://www.google.com/>
+              <img src = "google.png" height="50px" width="50px"></a></div>
+            </div>
+
+            <div class="col-xs-1 col-md-1  icon" style="margin-top:35px">
+              <div class="icon"><a href=https://www.youtube.com/>
+              <img src = "youtube.png" height="50px" width="50px"></a></div>
+            </div>
+
+            <div class="col-xs-1 col-md-1  icon" style="margin-top:33px">
+              <div class="icon"><a href=https://www.instagram.com/>
+              <img src = "instagram.png" height="54px" width="54px"></a></div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-4 footertext">
+              @2017 HELPFIT EXTREME GYM
+            </div>
+          </div>
+        </div>
 
   </body>
 

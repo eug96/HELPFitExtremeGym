@@ -59,7 +59,7 @@ function SignUpTrainer(){
     return false;
   }
 
-  location.replace("TrainerLogin.html")
+  location.replace("trainerLogin.html");
 }
 
 function SignUpMember(){
@@ -88,17 +88,27 @@ function SignUpMember(){
     return false;
   }
 
+<<<<<<< HEAD
   location.replace("MemberLogin.html");
 }
 
 function UpdateValidation(){
+=======
+  location.replace("memberLogin.html");
+}
 
-  var date = document.getElementById('inputDate');
-  var time = document.getElementById('inputTime');
-  var fee = document.getElementById('inputFee');
-  var valclass = document.getElementById('selClass');
-  var status = document.getElementById('selStatus');
+function SettingTrainer(){
+  location.replace("trainerPage.html");
+  alert("Your Data Has Been Saved");
+}
+>>>>>>> b590becd73be5394e535930d419fc68799d36da7
 
+function SettingMember(){
+  location.replace("memberPage.html");
+  alert("Your Data Has Been Saved");
+}
+
+<<<<<<< HEAD
   if (date.value.length==0) {
       alert("Please Enter Date!");
       return false;
@@ -141,3 +151,16 @@ return false;
 
   location.replace("reviewtrainer.html");
 }
+=======
+function AttendTrainingSession(){
+  var trainingSession = document.getElementById('chooseTrainingSession')
+
+  if(trainingSession.value== "CHOOSE TRAINING SESSION"){
+    alert("Please Select a Training Session to Attend");
+    return false;
+  }
+
+  alert("You Attended " + trainingSession.value + " Training Session");
+  location.replace("memberPage.html");
+}
+>>>>>>> b590becd73be5394e535930d419fc68799d36da7

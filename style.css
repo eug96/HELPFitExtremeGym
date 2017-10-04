@@ -33,6 +33,11 @@ div:hover.icon{
     opacity: 1;
 }
 
+h1 span{
+  font-size:52px;
+  margin-top:-20%;
+}
+
 ul.navigation> li > a{
   border-style: none;
   margin-top:-44px;
@@ -119,10 +124,10 @@ div.trainerPage{
   margin: 0;
   padding: 0;
 }
+
 div.header{
   color: white;
   font-family: 'Rockwell';
-  margin-bottom: 10%;
 }
 
 div.registerForm{
@@ -135,6 +140,11 @@ div.registerForm{
 div.loginForm{
   width: 500px;
   margin-bottom: 5%;
+}
+
+div.settingForm{
+  width: 500px;
+  margin-bottom: 2%;
 }
 
 button.signUpBtn{
@@ -158,37 +168,34 @@ button.signUpBtn:active{
   border-color: white;
 }
 
-/*div.memberPage{
-  margin-left: 100px;
-  bottom:400px;
-}*/
+div.memberHome{
+  margin-right: 15%;
+  margin-top: -5%;
+}
+
+div.trainerHome{
+  margin-right: 10%;
+  margin-top: -5%;
+}
 
 button.setting{
-  width: 195px;
+  width: 220px;
   height: 70px;
-  margin-left: 340px;
   font-family: 'RockWell';
   font-size: 23px;
-  margin-top:-350px;
   color: white;
   background-color: #C10000;
   border-color: #C10000;
   border-style: solid;
   letter-spacing: 3px;
   font-weight: bold;
+  border-radius: 10px;
 }
 
 button.setting:active{
   background-color: white;
   color:#C10000;
   border-color: white;
-}
-
-.listbox{
-  background-color: white;
-  position: absolute;
-  bottom: 100px;
-  margin-left: 335px;
 }
 
 h3 span{
@@ -204,19 +211,21 @@ h3 span{
 }
 
 .tableStyle{
-  font-size: 23px;
+  font-size: 18px;
   color: black;
   background-color: white;
-
+  table-layout: fixed;
 }
 
-.wholeTable{
-  margin-top: -400px;
+.table-bordered{
+  background-color: white;
+  border-color: color:black;
+  border-style: solid;
 }
 
-.wholeTable > tbody > tr >td{
-  color: white;
-  font-size: 18px;
+.table-bordered > tbody > tr >td{
+  color: black;
+  font-size: 15px;
 }
 
 .bgimg{
@@ -297,14 +306,12 @@ span.welcome{
   color: white;
 }
 
-
 table.viewmember{
   background-color: white;
   font: black 16px;
   border-spacing: 15px;
   table-layout: fixed;
   color: black;
-
 }
 
 .navButton {
