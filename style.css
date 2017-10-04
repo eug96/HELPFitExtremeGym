@@ -214,14 +214,10 @@ h3 span{
   font-size: 23px;
   color: black;
   background-color: white;
-
+  border-color: black;
 }
 
-.wholeTable{
-  margin-top: -400px;
-}
-
-.wholeTable > tbody > tr >td{
+.table-bordered > tbody > tr >td{
   color: white;
   font-size: 18px;
 }
