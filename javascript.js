@@ -91,22 +91,61 @@ function SignUpMember(){
   location.replace("MemberLogin.html")
 }
 
-$(function() {
+$(".btn").mouseup(function(){
+    $(this).blur();
+})
 
-  $("#updateModalHorizontal").validate({
-    rules: {
-      inputDate: {
-        required: true,
+function updateValidation(){
+  var date = document.getElementById('inputDate');
+  var time = document.getElementById('inputTime');
+  var fee = document.getElementById('inputFee');
+  var class = document.getElementById('selClass');
+  var status = document.getElementById('selStatus');
 
-      },
-      action: "required"
-    },
-    messages: {
-      inputDate: {
-        required: "Please enter date",
+  if (inputDate.value.length==0) {
+      alert("Please Enter Date");
+      return false;
+  }
 
-      },
-      action: "Please enter date"
-    }
-  });
-});
+  else if (inputTime.value.length==0) {
+    alert("Please Enter Time");
+    return false;
+  }
+
+}
+
+// $(function() {
+//
+//   $("#updateModalHorizontal").validate({
+//     rules: {
+//       inputDate: {
+//         required: true,
+//
+//       },
+//       action: "required"
+//     },
+//     messages: {
+//       inputDate: {
+//         required: "Please enter date",
+//
+//       },
+//       action: "Please enter date"
+//     }
+//   });
+// });
+//
+// $('#updateModalHorizontal').on('submit', function(e) {
+//   var date = $('#inputDate');
+//
+//   // Check if there is an entered value
+//   if(!inputDate.val()) {
+//     // Add errors highlight
+//     inputDate.closest('.form-group').removeClass('has-success').addClass('has-error');
+//
+//     // Stop submission of the form
+//     e.preventDefault();
+//   } else {
+//     // Remove the errors highlight
+//     inputDate.closest('.form-group').removeClass('has-error').addClass('has-success');
+//   }
+// });

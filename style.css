@@ -6,7 +6,7 @@ div.containerplus{
 
 div.footer{
   background-color: black;
-  width:1518px;
+  width:100%;
   height:125px;
   position:absolute;
 }
@@ -309,6 +309,24 @@ color:#C10000;
 border: 1px solid #fff;
 overflow-x: hidden;
 overflow-y: hidden;
+}
+
+.navButton:focus {
+
+padding: 20px;
+height:70px;
+width: 280px;
+margin-left: 3.5%;
+cursor: pointer;
+font-weight: bold;
+font-size: 150%;
+background: #C10000;
+color: #fff;
+border: 1px solid #C10000;
+border-radius: 10px;
+overflow-x: hidden;
+overflow-y: hidden;
+position: relative;
 }
 
 .modal-body .form-horizontal .col-sm-2,
