@@ -13,7 +13,7 @@ div.footer{
 
 div.footertext{
   color: white;
-  /*margin-left:42%;*/
+  margin-left:42%;
 }
 
 div.image{
@@ -24,10 +24,12 @@ div.image{
 
 div.icon{
   opacity: 0.7;
+
   margin: 0;
   padding: 0;
   margin-right: 0;
   padding-right: 0;
+  width:auto;
 }
 
 div:hover.icon{
@@ -86,7 +88,7 @@ div.signUpPage{
   margin-top: -100px;
 }
 
-div.loginPage{
+div.memberPage{
   display:flex;
   width:100%;
   height:100%;
@@ -104,6 +106,23 @@ div.loginPage{
   padding: 0;
 }
 
+div.trainerPage{
+  display:flex;
+  width:100%;
+  height:100%;
+  min-height: 600px;
+  min-width: 100%;
+  background:url(trainerLogin.jpg) center center no-repeat;
+  /*background:center center no-repeat;*/
+  background-size:cover;
+  background-position: center;
+  background-attachment: fixed; /*Makes the picture static*/
+  color:#fff;
+  align-items:center;
+  justify-content:center;
+  margin: 0;
+  padding: 0;
+}
 div.header{
   color: white;
   font-family: 'Rockwell';
@@ -123,7 +142,7 @@ div.loginForm{
 }
 
 button.signUpBtn{
-  width: 480px;
+  width: 470px;
   height: 70px;
   font-family: 'RockWell';
   font-size: 23px;
@@ -133,6 +152,8 @@ button.signUpBtn{
   border-style: solid;
   letter-spacing: 3px;
   font-weight: bold;
+  border-radius: 10px;
+  margin-top:8%;
 }
 
 button.signUpBtn:active{
@@ -141,10 +162,10 @@ button.signUpBtn:active{
   border-color: white;
 }
 
-div.memberPage{
+/*div.memberPage{
   margin-left: 100px;
   bottom:400px;
-}
+}*/
 
 button.setting{
   width: 195px;
@@ -291,7 +312,6 @@ table.viewmember{
 }
 
 .navButton {
-
 padding: 20px;
 height:70px;
 width: 280px;
@@ -307,6 +327,7 @@ overflow-x: hidden;
 overflow-y: hidden;
 position: relative;
 }
+
 .navButton:hover {
 background-color: white;
 color:#C10000;
