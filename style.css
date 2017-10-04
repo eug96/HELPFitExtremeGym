@@ -163,10 +163,10 @@ button.signUpBtn:active{
   border-color: white;
 }
 
-/*div.memberPage{
-  margin-left: 100px;
-  bottom:400px;
-}*/
+div.memberHome{
+  margin-right: 10%;
+  margin-top: -5%;
+}
 
 button.setting{
   width: 195px;
