@@ -118,7 +118,7 @@
 
   <div class="row">
     <div class=" col-md-push-5 col-md-offset-7 col-sm-push-4 col-sm-offset-2">
-      <a href="#" role="button" class="btn navButton">Back</a>
+      <a href="trainerPage.html" role="button" class="btn navButton">Back</a>
       <!-- <a href="#" class="navButton"><span id="revieworupdate">Review Trainer</span></a> -->
       <a class="btn navButton" data-toggle="modal" data-target="#updateModalHorizontal">
           Update Training Session
@@ -143,7 +143,7 @@
                   <!-- Modal Body -->
                   <div class="modal-body">
 
-                      <form class="form-horizontal" role="form">
+                      <form class="form-horizontal" role="form" id="updateModalHorizontal">
                         <div class="form-group">
                           <label  class="col-sm-2 control-label"
                                     for="inputDate">Date</label>
@@ -157,7 +157,7 @@
                                 for="inputTime" >Time</label>
                           <div class="col-sm-10">
                               <input type="time" class="form-control"
-                                  id="inputDate" placeholder="Time" required/>
+                                  id="inputTime" placeholder="Time" required/>
                           </div>
                         </div>
                         <div class="form-group">
@@ -182,7 +182,7 @@
                           <label class="col-sm-2 control-label"
                                 for="selStatus" >Status</label>
                           <div class="col-sm-10">
-                            <select class="form-control" id="selStatus">
+                            <select class="form-control" id="selStatus" required>
                             <option value="Available">Available</option>
                             <option value="Completed">Completed</option>
                             <option value="Cancelled">Cancelled</option>
@@ -199,7 +199,7 @@
                               data-dismiss="modal">
                                   Close
                       </button>
-                      <button type="submit" class="btn btn-primary">
+                      <button type="submit" class="btn btn-primary" onclick="UpdateValidation()">
                           Update
                       </button>
                   </div>
@@ -214,6 +214,7 @@
   </div>
   </div>
   </div>
+
 
   <div class="container-fluid footer">
     <div class="row">
@@ -242,7 +243,6 @@
         <div class="icon"><a href=https://www.instagram.com/>
         <img src = "instagram.png" height="54px" width="54px"></a></div>
       </div>
-
       </div>
 
       <div class="row">
