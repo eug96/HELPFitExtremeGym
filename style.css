@@ -6,7 +6,7 @@ div.containerplus{
 
 div.footer{
   background-color: black;
-  width:1518px;
+  width:100%;
   height:125px;
   position:absolute;
 }
@@ -83,18 +83,27 @@ div.signUpPage{
 }
 
 div.loginPage{
-  margin-left: -190px;
-  margin-bottom: -370px;
-  margin-top: -100px;
+  display:flex;
+  width:100%;
+  height:100%;
+  min-height: 600px;
+  min-width: 100%;
+  background:url(memberLogin.jpg) center center no-repeat;
+  /*background:center center no-repeat;*/
+  background-size:cover;
+  background-position: center;
+  background-attachment: fixed; /*Makes the picture static*/
+  color:#fff;
+  align-items:center;
+  justify-content:center;
+  margin: 0;
+  padding: 0;
 }
 
-h1 span{
-  position: absolute;
+div.header{
   color: white;
-  margin-left: 280px;
   font-family: 'Rockwell';
-  font-size: 60px;
-  margin-top: 20px;
+  margin-bottom: 10%;
 }
 
 div.registerForm{
@@ -106,18 +115,14 @@ div.registerForm{
 
 div.loginForm{
   width: 500px;
-  margin-left:335px;
-  margin-top: 20px;
-  bottom: 480px;
+  margin-bottom: 5%;
 }
 
 button.signUpBtn{
   width: 480px;
   height: 70px;
-  margin-left: 520px;
   font-family: 'RockWell';
   font-size: 23px;
-  margin-top:-400px;
   color: white;
   background-color: #C10000;
   border-color: #C10000;
@@ -193,10 +198,6 @@ h3 span{
   font-size: 18px;
 }
 
-.wholeTable >tbody > tr> a:hover{
-  color:black;
-}
-
 .bgimg{
   display:flex;
   width:100%;
@@ -213,7 +214,6 @@ h3 span{
   justify-content:center;
   margin: 0;
   padding: 0;
-
 }
 
 #updatebgimg{
