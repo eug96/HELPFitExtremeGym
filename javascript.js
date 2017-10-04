@@ -90,3 +90,23 @@ function SignUpMember(){
 
   location.replace("MemberLogin.html")
 }
+
+$(function() {
+
+  $("#updateModalHorizontal").validate({
+    rules: {
+      inputDate: {
+        required: true,
+
+      },
+      action: "required"
+    },
+    messages: {
+      inputDate: {
+        required: "Please enter date",
+
+      },
+      action: "Please enter date"
+    }
+  });
+});
