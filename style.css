@@ -33,6 +33,11 @@ div:hover.icon{
     opacity: 1;
 }
 
+h1 span{
+  font-size:52px;
+  margin-top:-20%;
+}
+
 ul.navigation> li > a{
   border-style: none;
   margin-top:-44px;
