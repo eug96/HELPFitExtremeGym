@@ -119,7 +119,7 @@ div.loginForm{
 }
 
 button.signUpBtn{
-  width: 480px;
+  width: 470px;
   height: 70px;
   font-family: 'RockWell';
   font-size: 23px;
@@ -129,6 +129,8 @@ button.signUpBtn{
   border-style: solid;
   letter-spacing: 3px;
   font-weight: bold;
+  border-radius: 10px;
+  margin-top:8%;
 }
 
 button.signUpBtn:active{
@@ -287,7 +289,6 @@ table.viewmember{
 }
 
 .navButton {
-
 padding: 20px;
 height:70px;
 width: 280px;
@@ -303,6 +304,7 @@ overflow-x: hidden;
 overflow-y: hidden;
 position: relative;
 }
+
 .navButton:hover {
 background-color: white;
 color:#C10000;
