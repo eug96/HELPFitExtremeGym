@@ -88,12 +88,12 @@ function SignUpMember(){
     return false;
   }
 
-<<<<<<< HEAD
+
   location.replace("MemberLogin.html");
 }
 
 function UpdateValidation(){
-=======
+
   location.replace("memberLogin.html");
 }
 
@@ -101,14 +101,21 @@ function SettingTrainer(){
   location.replace("trainerPage.html");
   alert("Your Data Has Been Saved");
 }
->>>>>>> b590becd73be5394e535930d419fc68799d36da7
+
 
 function SettingMember(){
   location.replace("memberPage.html");
   alert("Your Data Has Been Saved");
 }
 
-<<<<<<< HEAD
+function updateValidation(){
+
+  var date = document.getElementById('inputDate');
+  var time = document.getElementById('inputTime');
+  var fee = document.getElementById('inputFee');
+  var valclass = document.getElementById('selClass');
+  var status = document.getElementById('selStatus');
+
   if (date.value.length==0) {
       alert("Please Enter Date!");
       return false;
@@ -151,7 +158,7 @@ return false;
 
   location.replace("reviewtrainer.html");
 }
-=======
+
 function AttendTrainingSession(){
   var trainingSession = document.getElementById('chooseTrainingSession')
 
@@ -163,7 +170,6 @@ function AttendTrainingSession(){
   alert("You Attended " + trainingSession.value + " Training Session");
   location.replace("memberPage.html");
 }
-<<<<<<< HEAD
 
 function recordGroupTraningSession(){
   var title = document.getElementById('inputTitle');
@@ -213,6 +219,3 @@ function recordPersonalTraningSession(){
   location.replace("trainerPage.html");
   alert("Personal Training Session has Been Created");
 }
-=======
->>>>>>> b590becd73be5394e535930d419fc68799d36da7
->>>>>>> a39a9e6a57990ea36a3c129d9bfaf9fb7c53e474
