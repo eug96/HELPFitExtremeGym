@@ -15,7 +15,7 @@
   </head>
 
 
-  <body>
+  <body onload="dateFormat()">
     <!--Include JQuery: necessary for Bootstrap plugins-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!--Include bootstrap library as needed-->
@@ -51,66 +51,68 @@
           </div>
         </div>
 
+    <form onsubmit="return recordPersonalTraningSession()"
+     action="recordPersonalSessionInput.php" method="post">
+        <div class="row">
+          <div class="form-group">
+            <div class="col-xs-12 col-md-12 col-md-offset-4 recordForm">
+              <input type="text" style="height:70px" name="title"
+               class=" form form-control input-lg" id="inputTitle"
+               placeholder="TITLE">
+            </div>
+        </div>
+      </div>
+
       <div class="row">
-        <div class="form-group">
+        <div class="col-xs-12 col-md-12 col-md-offset-4 recordForm">
+          <input type="text" style="height:70px;" name="date"
+            class=" form form-control input-lg" id="inputDate">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-md-offset-4 recordForm">
+          <input type="text" style="height:70px" name="time"
+          class=" form form-control input-lg" id="inputTime"
+           placeholder="TIME">
+        </div>
+      </div>
+
+        <div class="row">
           <div class="col-xs-12 col-md-12 col-md-offset-4 recordForm">
-            <input type="text" style="height:70px" name="title"
-             class=" form form-control input-lg" id="inputTitle"
-             placeholder="TITLE">
+            <input type="number" style="height:70px" name="fee" class="
+             form form-control input-lg" id="inputFee"
+             placeholder="FEE (In Numbering Format)">
           </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-12 col-md-12 col-md-offset-4 recordForm">
-        <input type="date" style="height:70px;" name="date"
-          class=" form form-control input-lg" id="inputDate"
-          placeholder="dd/mm/yyyy">
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-12 col-md-12 col-md-offset-4 recordForm">
-        <input type="time" style="height:70px" name="time"
-        class=" form form-control input-lg" id="inputTime"
-         placeholder="TIME">
-      </div>
-    </div>
-
-      <div class="row">
-        <div class="col-xs-12 col-md-12 col-md-offset-4 recordForm">
-          <input type="text" style="height:70px" name="fee" class="
-           form form-control input-lg" id="inputFee" placeholder="FEE">
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-xs-12 col-md-12 col-md-offset-4 recordForm">
-          <select class="form-control listbox" id="status"
-           style="width:470px;height:70px;font-size: 18px;">
-            <option>AVAILABLE</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12 col-md-12 col-md-offset-4 recordForm">
-          <input type="text" style="height:70px" name="note"
-          class=" form form-control input-lg" id="inputNotes"
-          placeholder="NOTES">
+        <div class="row">
+          <div class="col-xs-12 col-md-12 col-md-offset-4 recordForm">
+            <select class="form-control listbox" name="status" id="inputStatus"
+             style="width:470px;height:70px;font-size: 18px;">
+              <option>AVAILABLE</option>
+            </select>
           </div>
-      </div>
+        </div>
 
-      <div class="row">
-        <div class="col-xs-4 col-md-2 col-md-offset-4"
-        style="margin-right:1.5%">
-          <button type="button" class="setting"
-          onclick="recordPersonalTraningSession()">CREATE</button>
+        <div class="row">
+          <div class="col-xs-12 col-md-12 col-md-offset-4 recordForm">
+            <input type="text" style="height:70px" name="note"
+            class=" form form-control input-lg" id="inputNotes"
+            placeholder="NOTES">
+            </div>
         </div>
-        <div class="col-xs-4 col-md-2">
-          <a href="trainerPage.html"><button type="button"
-             class="setting">BACK</button></a>
-        </div>
+
+        <div class="row">
+          <div class="col-xs-4 col-md-2 col-md-offset-4"
+          style="margin-right:1.5%">
+            <button type="submit" class="setting">CREATE</button>
+          </div>
+          <div class="col-xs-4 col-md-2">
+            <a href="trainerPage.html"><button type="button"
+               class="setting">BACK</button></a>
+          </div>
+      </form>
       </div>
     </div>
   </div>
