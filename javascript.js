@@ -12,8 +12,6 @@ function MemberLogin() {
       return false;
     }
 
-    location.replace("memberPage.html");
-
 }
 
 function TrainerLogin() {
