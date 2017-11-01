@@ -68,51 +68,64 @@
                   <th class="col-md-2 col-xs-2">TRAINER SPECIALTY</th>
                 </tr>
 
-                <tr>
-                  <td>BIT210</td>
-                  <td>MMA</td>
-                  <td>10/10/2017</td>
-                  <td>8:00pm</td>
-                  <td>GROUP(MMA)</td>
-                  <td>AVAILABLE</td>
-                  <td>EUGENE</td>
-                  <td>MMA</td>
-                </tr>
+                <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "helpfitextremegym";
+                $con = new mysqli($servername, $username, $password, $dbname);
 
-                <tr>
-                  <td>BIT216</td>
-                  <td>DANCE</td>
-                  <td>20/10/2017</td>
-                  <td>8:00pm</td>
-                  <td>GROUP(DANCE)</td>
-                  <td>FULL</td>
-                  <td>JOE</td>
-                  <td>DANCE</td>
-                </tr>
+                $sql = "SELECT * FROM trainingsessionformember";
+                $result = mysqli_query($con, $sql);
 
-                <tr>
-                  <td>BGM208</td>
-                  <td>SPORT</td>
-                  <td>10/10/2017</td>
-                  <td>8:00pm</td>
-                  <td>PERSONAL</td>
-                  <td>NOT AVAILABLE</td>
-                  <td>JACK</td>
-                  <td>SPORT</td>
-                </tr>
+                if (mysqli_num_rows($result) > 0) {
+                   while($row = mysqli_fetch_assoc($result)) {
+                     echo '<tr>
+                     <td>'. $row["sessionID"].'</td>
+                     <td>'. $row["title"].'</td>
+                     <td>'. $row['dateInput'] . '</td>
+                     <td>'. $row['timeInput'].'</td>
+                     <td>'. $row["type"].'</td>
+                     <td>'. $row["status"].'</td>
+                     <td>'. $row["trainer"].'</td>
+                     <td>'. $row["trainerSpecialty"].'</td>
+                     </tr>';
+                    }
+                }
+
+                ?>
 
             </table>
           </div>
         </div>
 
+      <form onsubmit="return AttendTrainingSession()" action="registerTrainingSessionInput.php" method="post">
         <div class="row">
           <div class="col-xs-12 col-md-12">
-            <select class="form-control" id="chooseTrainingSession"
+            <select class="form-control" name="chooseTrainingSession"
+            id="inputChooseTrainingSession"
              style="width:310px;height:40px;font-size: 18px;">
-              <option>CHOOSE TRAINING SESSION</option>
-              <option>BIT210</option>
-              <option>BIT216</option>
-              <option>BGM208</option>
+              <option>CHOOSE TRAINING SESSION
+                <?php
+                  $servername = "localhost";
+                  $username = "root";
+                  $password = "";
+                  $dbname = "helpfitextremegym";
+                  $con = new mysqli($servername, $username, $password, $dbname);
+
+                  $sql = "SELECT * FROM trainingsessionformember";
+                  $result = mysqli_query($con, $sql);
+
+                  if (mysqli_num_rows($result) > 0) {
+                    while($row = mysqli_fetch_assoc($result)) {
+                      echo '<option value="' . $row['sessionID'] . '">' . $row['sessionID'] . '</option>';
+                    }
+                  }
+                  else{
+                    echo "no result";
+                  }
+                 ?>
+              </option>
             </select>
           </div>
         </div>
@@ -120,8 +133,7 @@
         <div class="row">
           <div class="col-xs-4 col-md-1 col-md-offset-8"
           style="margin-right:8.5%;margin-top:2%">
-            <button type="button" class="setting"
-            onclick="AttendTrainingSession()">ATTEND</button>
+            <button type="submit" class="setting">ATTEND</button>
           </div>
 
           <div class="col-xs-4 col-md-1" style="margin-top:2%">
@@ -129,12 +141,10 @@
               <button type="button" class="setting">BACK</button></a>
           </div>
       </div>
+    </form>
 
       </div>
     </div>
-
-
-
 
       <div class="container-fluid footer">
         <div class="row">

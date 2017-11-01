@@ -12,8 +12,6 @@ function MemberLogin() {
       return false;
     }
 
-    location.replace("memberPage.html");
-
 }
 
 function TrainerLogin() {
@@ -29,37 +27,6 @@ function TrainerLogin() {
       alert("Please Enter Password");
       return false;
     }
-
-    location.replace("trainerPage.html");
-}
-
-function SignUpTrainer(){
-  var username = document.getElementById('inputUsername');
-  var password = document.getElementById('inputPassword');
-  var name = document.getElementById('inputName');
-  var email = document.getElementById('inputEmail');
-
-  if (username.value.length==0) {
-      alert("Please Enter Username");
-      return false;
-  }
-
-  else if (name.value.length==0) {
-    alert("Please Enter Name");
-    return false;
-  }
-
-  else if (email.value.length==0) {
-    alert("Please Enter Email");
-    return false;
-  }
-
-  else if (password.value.length==0) {
-    alert("Please Enter Password");
-    return false;
-  }
-
-  location.replace("trainerLogin.html");
 }
 
 function SignUpMember(){
@@ -68,28 +35,25 @@ function SignUpMember(){
   var name = document.getElementById('inputName');
   var email = document.getElementById('inputEmail');
 
-  if (username.value.length==0) {
+    if (username.value.length==0) {
       alert("Please Enter Username");
       return false;
-  }
+    }
 
-  else if (name.value.length==0) {
-    alert("Please Enter Name");
-    return false;
-  }
+    else if (name.value.length==0) {
+      alert("Please Enter Name");
+      return false;
+    }
 
-  else if (email.value.length==0) {
-    alert("Please Enter Email");
-    return false;
-  }
+    else if (email.value.length==0) {
+      alert("Please Enter Email");
+      return false;
+    }
 
-  else if (password.value.length==0) {
-    alert("Please Enter Password");
-    return false;
-  }
-
-
-  location.replace("MemberLogin.html");
+    else if (password.value.length==0) {
+      alert("Please Enter Password");
+      return false;
+    }
 }
 
 function UpdateValidation(){
@@ -160,7 +124,7 @@ return false;
 }
 
 function AttendTrainingSession(){
-  var trainingSession = document.getElementById('chooseTrainingSession')
+  var trainingSession = document.getElementById('inputChooseTrainingSession');
 
   if(trainingSession.value== "CHOOSE TRAINING SESSION"){
     alert("Please Select a Training Session to Attend");
@@ -168,13 +132,12 @@ function AttendTrainingSession(){
   }
 
   alert("You Attended " + trainingSession.value + " Training Session");
-  location.replace("memberPage.html");
 }
 
 function recordGroupTraningSession(){
   var title = document.getElementById('inputTitle');
   var maxParticipates = document.getElementById('inputMaxParticipates');
-  var classType = document.getElementById('classType');
+  var classTypes = document.getElementById('inputClassType');
 
   if(title.value.length==0){
     alert("Please Enter the Title of the Training Session");
@@ -182,24 +145,36 @@ function recordGroupTraningSession(){
   }
 
   else if(maxParticipates.value.length==0){
-    alert("Please Enter the Maximum Number of" +
-    " Participants of the Training Session");
+    alert("Please Enter the Maximum Number of Participants");
     return false;
   }
 
-  else if(classType.value=="SELECT CLASS TYPE"){
-    alert("Please Select the Class Type of the Training Session");
+  else if(classTypes.value=="SELECT CLASS TYPE"){
+    alert("Please Select Class Type");
     return false;
   }
 
-  location.replace("trainerPage.html");
   alert("Group Training Session has Been Created");
+}
+
+function dateFormat(){
+  var today = new Date();
+  var day = today.getDate().toString();
+  var month = today.getMonth() + 1;
+  var newMonth = month.toString();
+  var year = today.getFullYear().toString();
+  var date = day + " / " + newMonth + " / " + year;
+
+  document.getElementById("inputDate").value= date;
+  document.getElementById("inputTime").value= "20 : 00";
 }
 
 function recordPersonalTraningSession(){
   var title = document.getElementById('inputTitle');
   var fee = document.getElementById('inputFee');
   var notes = document.getElementById('inputNotes');
+
+
 
   if(title.value.length==0){
     alert("Please Enter the Title of the Training Session");
@@ -216,6 +191,5 @@ function recordPersonalTraningSession(){
     return false;
   }
 
-  location.replace("trainerPage.html");
   alert("Personal Training Session has Been Created");
 }
