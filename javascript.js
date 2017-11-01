@@ -34,6 +34,7 @@ function SignUpMember(){
   var password = document.getElementById('inputPassword');
   var name = document.getElementById('inputName');
   var email = document.getElementById('inputEmail');
+  var level = document.getElementById('inputLevel');
 
     if (username.value.length==0) {
       alert("Please Enter Username");

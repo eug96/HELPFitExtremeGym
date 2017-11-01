@@ -9,6 +9,7 @@
  $name=$_POST['name'];
  $email=$_POST['email'];
  $passwordInput=$_POST['password'];
+ $level=$_POST['level'];
 
  $sql = "SELECT username FROM member WHERE username='$usernameInput'";
  $result =  mysqli_query($con, $sql);
@@ -22,8 +23,8 @@
    echo"<script type='text/javascript'>alert('Username has been register ' +
    'Successfully!!!')</script>";
    header('refresh:0.1; url=memberLogin.html');
-   $sql = "INSERT INTO  member (username,name,email,password)
-           VALUES ('$usernameInput','$name','$email','$passwordInput')";
+   $sql = "INSERT INTO  member (username,name,email,password,level)
+           VALUES ('$usernameInput','$name','$email','$passwordInput','$level')";
   }
  mysqli_query($con, $sql);
  mysqli_close($con);
