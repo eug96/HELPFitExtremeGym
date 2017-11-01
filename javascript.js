@@ -55,6 +55,11 @@ function SignUpMember(){
       alert("Please Enter Password");
       return false;
     }
+
+    else if (level.value =="CHOOSE YOUR LEVEL") {
+      alert("Please Choose Your Level");
+      return false;
+    }
 }
 
 function UpdateValidation(){
