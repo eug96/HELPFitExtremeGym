@@ -66,19 +66,20 @@
           </div>
         </div>
 
-    <form onsubmit="return SignUpMember()" action="signUpTrainerInput.php" method="post">
+    <form onsubmit="return TrainerSignUp()" action="signUpTrainerInput.php"
+    method="post">
       <div class="row">
         <div class="col-xs-12 col-md-12 loginForm">
           <input type="text" style="height:70px"
-          name="username" class=" form form-control input-lg"
+          name="username" class="form form-control input-lg"
           id="inputUsername" placeholder="USERNAME">
         </div>
       </div>
 
       <div class="row">
         <div class="col-xs-12 col-md-12 loginForm">
-          <input type="text" style="height:70px;" name="name"
-          class=" form form-control input-lg"
+          <input type="text" style="height:70px;text-transform:uppercase" name="name"
+          class="form form-control input-lg"
           id="inputName" placeholder="NAME">
         </div>
       </div>
@@ -86,7 +87,7 @@
       <div class="row">
         <div class="col-xs-12 col-md-12 loginForm">
           <input type="email" style="height:70px" name="email"
-          class=" form form-control input-lg"
+          class="form form-control input-lg"
           id="inputEmail" placeholder="EMAIL">
         </div>
       </div>
@@ -94,8 +95,16 @@
       <div class="row">
         <div class="col-xs-12 col-md-12 loginForm">
           <input type="password" style="height:70px" name="password"
-          class=" form form-control input-lg" id="inputPassword"
+          class="form form-control input-lg" id="inputPassword"
           placeholder="PASSWORD">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-12 settingForm">
+          <input type="text" style="height:70px;text-transform:uppercase" name="specialty"
+          class="form form-control input-lg" id="inputSpecialty"
+          placeholder="SPECIALTY">
         </div>
       </div>
 

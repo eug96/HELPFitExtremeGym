@@ -34,32 +34,59 @@ function SignUpMember(){
   var password = document.getElementById('inputPassword');
   var name = document.getElementById('inputName');
   var email = document.getElementById('inputEmail');
-  var level = document.getElementById('inputLevel');
 
-    if (username.value.length==0) {
-      alert("Please Enter Username");
-      return false;
-    }
+  if (username.value.length==0) {
+    alert("Please Enter Username");
+    return false;
+  }
 
-    else if (name.value.length==0) {
-      alert("Please Enter Name");
-      return false;
-    }
+  else if (name.value.length==0) {
+    alert("Please Enter Name");
+    return false;
+  }
 
-    else if (email.value.length==0) {
-      alert("Please Enter Email");
-      return false;
-    }
+  else if (email.value.length==0) {
+    alert("Please Enter Email");
+    return false;
+  }
 
-    else if (password.value.length==0) {
-      alert("Please Enter Password");
-      return false;
-    }
+  else if (password.value.length==0) {
+    alert("Please Enter Password");
+    return false;
+  }
+}
 
-    else if (level.value =="CHOOSE YOUR LEVEL") {
-      alert("Please Choose Your Level");
-      return false;
-    }
+function TrainerSignUp(){
+  var username = document.getElementById('inputUsername');
+  var name = document.getElementById('inputName');
+  var email = document.getElementById('inputEmail');
+  var password = document.getElementById('inputPassword');
+  var specialty = document.getElementById('inputSpecialty');
+
+  if (username.value.length==0) {
+    alert("Please Enter Username");
+    return false;
+  }
+
+  else if (name.value.length==0) {
+    alert("Please Enter Name");
+    return false;
+  }
+
+  else if (email.value.length==0) {
+    alert("Please Enter Email");
+    return false;
+  }
+
+  else if (password.value.length==0) {
+    alert("Please Enter Password");
+    return false;
+  }
+
+  else if (specialty.value.length==0) {
+    alert("Please Enter Your Specialty");
+    return false;
+  }
 }
 
 function UpdateValidation(){

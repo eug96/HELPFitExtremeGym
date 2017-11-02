@@ -51,7 +51,10 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-xs-12 col-md-12 header" style="margin-bottom:2%">
-                <h1><span>WELCOME EUGENE</span></h1>
+                <h1><span>WELCOME<?php
+                session_start();
+                $name=$_SESSION['username'];
+                echo "". $name.""; ?></span></h1>
               </div>
             </div>
 
