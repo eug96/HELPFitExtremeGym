@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  $name=$_SESSION['name'];
+  $email=$_SESSION['email'];
+  $password=$_SESSION['password'];
+  $level=$_SESSION['level'];
+ ?>
 <html>
 
   <head>
@@ -57,9 +64,9 @@
 
         <div class="row">
           <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
-            <input type="text" style="height:70px;" name="name"
-            class=" form form-control input-lg" id="inputName"
-            placeholder="NAME">
+            <input type="text" style="height:70px;text-transform:uppercase;"
+            name="name" class=" form form-control input-lg" id="inputName"
+            placeholder="NAME" <?php echo '"<input value="'.$name. '""'?>>
           </div>
         </div>
 
@@ -67,15 +74,15 @@
           <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
             <input type="email" style="height:70px" name="email"
              class=" form form-control input-lg" id="inputEmail"
-              placeholder="EMAIL">
+              placeholder="EMAIL" <?php echo '"<input value="'.$email. '""'?>>
           </div>
         </div>
 
         <div class="row">
           <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
-            <input type="password" style="height:70px" name="password"
+            <input type="text" style="height:70px" name="password"
             class="form form-control input-lg" id="inputPassword"
-            placeholder="PASSWORD">
+            placeholder="PASSWORD"<?php echo '"<input value="'.$password. '""'?>>
           </div>
         </div>
 
@@ -99,7 +106,7 @@
           </div>
 
           <div class="col-xs-3 col-md-2">
-            <a href="memberPage.html">
+            <a href="memberPage.php">
               <button type="button" class="setting">CANCEL</button>
             </a>
           </div>

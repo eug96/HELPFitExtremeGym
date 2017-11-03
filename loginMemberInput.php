@@ -18,12 +18,15 @@
        $result =  mysqli_query($con, $sql);
 
        if (mysqli_num_rows($result) > 0) {
-         $sql = "SELECT name FROM member WHERE username='$usernameInput'";
+         $sql = "SELECT * FROM member WHERE username='$usernameInput'";
          $result2= mysqli_query($con,$sql);
 
          if(mysqli_num_rows($result2) > 0){
            while($row = mysqli_fetch_assoc($result2)){
              echo $_SESSION['name']=$row['name'];
+             echo $_SESSION['email']=$row['email'];
+             echo $_SESSION['password']=$row['password'];
+             echo $_SESSION['level']=$row['level'];
            }
          }
 
