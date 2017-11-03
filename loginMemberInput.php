@@ -18,7 +18,15 @@
        $result =  mysqli_query($con, $sql);
 
        if (mysqli_num_rows($result) > 0) {
-         $_SESSION['name']=$name;
+         $sql = "SELECT name FROM member WHERE username='$usernameInput'";
+         $result2= mysqli_query($con,$sql);
+
+         if(mysqli_num_rows($result2) > 0){
+           while($row = mysqli_fetch_assoc($result2)){
+             echo $_SESSION['name']=$row['name'];
+           }
+         }
+
          header('Location: memberPage.php');
        }
 
@@ -29,7 +37,7 @@
      }
      else {
          echo"<script type='text/javascript'>alert('Enter both username and password')</script>";
-         header( "refresh:0; url=memberLogin.html" );
+         header( "refresh:0.1; url=memberLogin.html" );
        }
   }
 ?>
