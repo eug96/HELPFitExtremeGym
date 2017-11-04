@@ -23,6 +23,7 @@
 
          if(mysqli_num_rows($result2) > 0){
            while($row = mysqli_fetch_assoc($result2)){
+             echo $_SESSION['username']=$row['username'];
              echo $_SESSION['name']=$row['name'];
              echo $_SESSION['email']=$row['email'];
              echo $_SESSION['password']=$row['password'];

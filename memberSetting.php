@@ -61,7 +61,7 @@
             </h1>
           </div>
         </div>
-
+      <form action="settingMemberInput.php" method="post">
         <div class="row">
           <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
             <input type="text" style="height:70px;text-transform:uppercase;"
@@ -88,12 +88,22 @@
 
         <div class="row">
           <div class="col-xs-12 col-md-12 col-md-offset-4">
-            <select class="form-control" id="chooselevel"
+            <select class="form-control" id="chooselevel" name="level"
              style="width:470px;height:70px;font-size: 18px;">
-              <option>CHOOSE YOUR LEVEL</option>
-              <option>BEGINNER</option>
-              <option>ADVANCE</option>
-              <option>EXPERT</option>
+              <?php echo '<option value="' . $level . '">'. $level .'</option>';
+              if ($level == "BEGINNER") {
+                echo '<option value="' ."ADVANCE". '">'."ADVANCE".'</option>';
+                echo '<option value="' ."EXPERT". '">'."EXPERT".'</option>';
+              }
+              else if ($level == "ADVANCE") {
+                echo '<option value="' ."BEGINNER". '">'."ADVANCE".'</option>';
+                echo '<option value="' ."EXPERT". '">'."EXPERT".'</option>';
+              }
+              else if ($level == "EXPERT") {
+                echo '<option value="' ."BEGINNER". '">'."ADVANCE".'</option>';
+                echo '<option value="' ."ADVANCE". '">'."EXPERT".'</option>';
+              }
+              ?>
             </select>
           </div>
         </div>
@@ -101,8 +111,7 @@
         <div class="row" style="margin-top:5%">
           <div class="col-xs-3 col-md-2 col-md-offset-4"
           style="margin-right:0.8%">
-            <button type="button" class="setting"
-            onclick="SettingMember()">SAVE</button>
+            <button type="submit" class="setting">SAVE</button>
           </div>
 
           <div class="col-xs-3 col-md-2">
@@ -111,6 +120,7 @@
             </a>
           </div>
         </div>
+      </form>
       </div>
     </div>
 

@@ -99,12 +99,6 @@ function SettingTrainer(){
   alert("Your Data Has Been Saved");
 }
 
-
-function SettingMember(){
-  location.replace("memberPage.html");
-  alert("Your Data Has Been Saved");
-}
-
 function updateValidation(){
 
   var date = document.getElementById('inputDate');
