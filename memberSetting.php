@@ -61,9 +61,11 @@
             </h1>
           </div>
         </div>
+
       <form action="settingMemberInput.php" method="post">
         <div class="row">
           <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
+            <h3>Name:</h3>
             <input type="text" style="height:70px;"
             name="name" class=" form form-control input-lg" id="inputName"
             placeholder="NAME" <?php echo '"<input value="'.$name. '""'?>>
@@ -72,6 +74,7 @@
 
         <div class="row">
           <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
+            <h3 style="margin-top:-10px;">Email:</h3>
             <input type="email" style="height:70px" name="email"
              class=" form form-control input-lg" id="inputEmail"
               placeholder="EMAIL" <?php echo '"<input value="'.$email. '""'?>>
@@ -80,6 +83,7 @@
 
         <div class="row">
           <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
+            <h3 style="margin-top:-10px;">Password:</h3>
             <input type="text" style="height:70px" name="password"
             class="form form-control input-lg" id="inputPassword"
             placeholder="PASSWORD"<?php echo '"<input value="'.$password. '""'?>>
@@ -88,6 +92,7 @@
 
         <div class="row">
           <div class="col-xs-12 col-md-12 col-md-offset-4">
+            <h3 style="margin-top:-10px;">Level:</h3>
             <select class="form-control" id="chooselevel" name="level"
              style="width:470px;height:70px;font-size: 18px;">
               <?php echo '<option value="' . $level . '">'. $level .'</option>';

@@ -66,6 +66,7 @@ $specialty=$_SESSION['specialty'];
         <form action="settingTrainerInput.php" method="post">
           <div class="row">
             <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
+              <h3>Name:</h3>
               <input type="text" style="height:70px;" name="name"
               class=" form form-control input-lg" id="inputName"
               placeholder="NAME"<?php echo '"<input value="'.$name.'""'?>>
@@ -74,6 +75,7 @@ $specialty=$_SESSION['specialty'];
 
           <div class="row">
             <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
+              <h3 style="margin-top:-10px;">Email:</h3>
               <input type="email" style="height:70px" name="email"
               class=" form form-control input-lg" id="inputEmail"
               placeholder="EMAIL"<?php echo '"<input value="'.$email.'""'?>>
@@ -82,6 +84,7 @@ $specialty=$_SESSION['specialty'];
 
           <div class="row">
             <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
+              <h3 style="margin-top:-10px;">Password:</h3>
               <input type="text" style="height:70px" name="password"
                class=" form form-control input-lg" id="inputPassword"
                placeholder="PASSWORD"<?php echo '"<input value="'.$password.'""'?>>
@@ -90,6 +93,7 @@ $specialty=$_SESSION['specialty'];
 
           <div class="row">
             <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
+              <h3 style="margin-top:-10px;">Specialty:</h3>
               <input type="text" style="height:70px" name="specialty"
               class=" form form-control input-lg" id="inputSpecialty"
               placeholder="SPECIALTY"<?php echo '"<input value="'.$specialty.'""'?>>
@@ -103,7 +107,7 @@ $specialty=$_SESSION['specialty'];
             </div>
             <div class="col-xs-3 col-md-2">
               <a href="trainerPage.php">
-                <button type="button" class="setting">CANCEL</button></a>
+                <button type="button" class="setting">BACK TO HOMEPAGE</button></a>
             </div>
           </div>
         </form>
