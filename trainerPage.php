@@ -1,3 +1,7 @@
+<?php
+session_start();
+$name=$_SESSION['name'];
+ ?>
 <html>
 
   <head>
@@ -45,7 +49,7 @@
     <ul class ="nav navigation nav-tabs navbar-right"
       style="margin-right: -15px;">
       <li class="nav nav-tabs">
-        <a href="trainerSetting.html">SETTING</a>
+        <a href="trainerSetting.php">SETTING</a>
       </li>
     </ul>
 
@@ -53,8 +57,8 @@
     <div class="trainerPage">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xs-12 col-md-12 header">
-            <h1><span>WELCOME</span></h1>
+          <div class="col-xs-12 col-md-12 header" style="text-transform:uppercase">
+            <h1><span>WELCOME <?php echo " ". $name.""; ?></span></h1>
           </div>
         </div>
 

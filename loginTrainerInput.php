@@ -1,24 +1,47 @@
 <?php
- $servername = "localhost";
- $username = "root";
- $password = "";
- $dbname = "helpfitextremegym";
- $con = new mysqli($servername, $username, $password, $dbname);
+ session_start();
+ if(isset($_POST['submit']))
+ {
+   $servername = "localhost";
+   $username = "root";
+   $password = "";
+   $dbname = "helpfitextremegym";
+   $con = new mysqli($servername, $username, $password, $dbname);
 
 
- $usernameInput=$_POST['username'];
- $passwordInput=$_POST['password'];
+   $usernameInput=$_POST['username'];
+   $passwordInput=$_POST['password'];
 
- $sql = "SELECT username FROM trainer WHERE username='$usernameInput'";
- $sql = "SELECT username FROM trainer WHERE password='$passwordInput'";
- $result =  mysqli_query($con, $sql);
+   if($usernameInput!=''&&$passwordInput!='')
+    {
+       $sql = "SELECT username FROM trainer WHERE username='$usernameInput' and password='$passwordInput'";
+       $result =  mysqli_query($con, $sql);
 
- if (mysqli_num_rows($result) > 0) {
-   header('Location: trainerPage.html');
-   }
+       if (mysqli_num_rows($result) > 0) {
+         $sql = "SELECT * FROM trainer WHERE username='$usernameInput'";
+         $result2= mysqli_query($con,$sql);
 
- else{
-   echo"<script type='text/javascript'>alert('Incorrect Username or Password')</script>";
-   header( "refresh:0.1; url=trainerLogin.html" );
- }
+         if(mysqli_num_rows($result2) > 0){
+           while($row = mysqli_fetch_assoc($result2)){
+             echo $_SESSION['username']=$row['username'];
+             echo $_SESSION['name']=$row['name'];
+             echo $_SESSION['email']=$row['email'];
+             echo $_SESSION['password']=$row['password'];
+             echo $_SESSION['specialty']=$row['specialty'];
+           }
+         }
+
+         header('Location: trainerPage.php');
+       }
+
+       else{
+         echo"<script type='text/javascript'>alert('Incorrect Username or Password')</script>";
+         header( "refresh:0.1; url=trainerLogin.html" );
+       }
+     }
+     else {
+         echo"<script type='text/javascript'>alert('Enter both username and password')</script>";
+         header( "refresh:0.1; url=trainerLogin.html" );
+       }
+  }
 ?>

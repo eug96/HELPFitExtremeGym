@@ -1,3 +1,10 @@
+<?php
+session_start();
+$name=$_SESSION['name'];
+$email=$_SESSION['email'];
+$password=$_SESSION['password'];
+$specialty=$_SESSION['specialty'];
+ ?>
 <html>
 
   <head>
@@ -61,7 +68,7 @@
             <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
               <input type="text" style="height:70px;" name="name"
               class=" form form-control input-lg" id="inputName"
-              placeholder="NAME">
+              placeholder="NAME"<?php echo '"<input value="'.$name. '""'?>>
             </div>
           </div>
 
@@ -69,15 +76,15 @@
             <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
               <input type="email" style="height:70px" name="email"
               class=" form form-control input-lg" id="inputEmail"
-              placeholder="EMAIL">
+              placeholder="EMAIL"<?php echo '"<input value="'.$email. '""'?>>
             </div>
           </div>
 
           <div class="row">
             <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
-              <input type="password" style="height:70px" name="password"
+              <input type="text" style="height:70px" name="password"
                class=" form form-control input-lg" id="inputPassword"
-               placeholder="PASSWORD">
+               placeholder="PASSWORD"<?php echo '"<input value="'.$password.'""'?>>
             </div>
           </div>
 
@@ -85,14 +92,14 @@
             <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
               <input type="text" style="height:70px" name="specialty"
               class=" form form-control input-lg" id="inputSpecialty"
-              placeholder="SPECIALTY">
+              placeholder="SPECIALTY"<?php echo '"<input value="'.$specialty. '""'?>>
             </div>
           </div>
 
           <div class="row">
             <div class="col-xs-3 col-md-2 col-md-offset-4"
             style="margin-right:0.8%">
-              <button type="button" class="setting"
+              <button type="submit" class="setting"
               onclick="SettingTrainer()">SAVE</button>
             </div>
             <div class="col-xs-3 col-md-2">

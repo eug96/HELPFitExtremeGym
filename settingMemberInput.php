@@ -1,9 +1,6 @@
 <?php
   session_start();
-  $name=$_SESSION['name'];
-  $email=$_SESSION['email'];
-  $password=$_SESSION['password'];
-  $level=$_SESSION['level'];
+  $usernameInput=$_SESSION['username'];
 
   $servername = "localhost";
   $username = "root";
@@ -11,26 +8,24 @@
   $dbname = "helpfitextremegym";
   $con = new mysqli($servername, $username, $password, $dbname);
 
+  $name=$_POST['name'];
+  $email=$_POST['email'];
+  $password=$_POST['password'];
+  $level=$_POST['level'];
 
-  $newName=$_POST['name'];
-  $newEmail=$_POST['email'];
-  $newPassword=$_POST['password'];
-  $newLevel=$_POST['level'];
+  $sql="SELECT * FROM member WHERE username='$usernameInput'";
+  $result=mysqli_query($con,$sql);
 
-  $name=$newName;
-  $email=$newEmail;
-  $password=$newPassword;
-  $level=$newLevel;
-  
-  $sql = "UPDATE member SET name = $name";
-  $sql = "UPDATE member SET email = $email";
-  $sql = "UPDATE member SET password = $password";
-  $sql = "UPDATE member SET level = $level";
+  if(mysqli_num_rows($result) > 0){
+    $sql="UPDATE member SET name='$name',email='$email',password='$password',level='$level' WHERE username='$usernameInput'";
+    if (mysqli_query($con, $sql)) {
+      echo "<script type='text/javascript'>alert('Your Info has been Updated')</script>";
+      header( "refresh:0.1; memberPage.php" );
+    }
+  }
 
-  echo"<script type='text/javascript'>alert('Your Info has been Updated')</script>";
-  header("Location:memberPage.php");
 
-  mysqli_query($con, $sql);
+
+
   mysqli_close($con);
-
 ?>
