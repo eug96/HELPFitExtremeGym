@@ -179,23 +179,11 @@ function recordGroupTraningSession(){
   alert("Group Training Session has Been Created");
 }
 
-function dateFormat(){
-  var today = new Date();
-  var day = today.getDate().toString();
-  var month = today.getMonth() + 1;
-  var newMonth = month.toString();
-  var year = today.getFullYear().toString();
-  var date = day + " / " + newMonth + " / " + year;
-
-  document.getElementById("inputDate").value= date;
-  document.getElementById("inputTime").value= "20 : 00";
-}
-
 function recordPersonalTraningSession(){
   var title = document.getElementById('inputTitle');
   var fee = document.getElementById('inputFee');
   var notes = document.getElementById('inputNotes');
-
+  // var date = document.getElementById('inputDate');
 
 
   if(title.value.length==0){
@@ -207,6 +195,11 @@ function recordPersonalTraningSession(){
     alert("Please Enter the Fee");
     return false;
   }
+
+  // else if(date.value="dd----yyyy"){
+  //   alert("Please Enter Date")
+  //   return false;
+  // }
 
   else if(notes.value.length==0){
     alert("Please Enter Notes");

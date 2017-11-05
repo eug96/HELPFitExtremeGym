@@ -1,4 +1,8 @@
 <?php
+  session_start();
+  $name=$_SESSION['name'];
+  $specialty=$_SESSION['specialty'];
+
  $servername = "localhost";
  $username = "root";
  $password = "";
@@ -12,15 +16,15 @@
  $status=$_POST['status'];
  $maxParticipates=$_POST['maxParticipates'];
  $classType=$_POST['classType'];
- $sessionID = uniqid();
 
- header('Location: trainerPage.html');
- $sql = "INSERT INTO  trainingsession (sessionID,title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type)
-         VALUES ('$sessionID','$title','$dateInput','$timeInput','$fee','$status',$maxParticipates,0,'Group ($classType)')";
+
+ header('Location: trainerPage.php');
+ $sql = "INSERT INTO  trainingsession (title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type)
+         VALUES ('$title','$dateInput','$timeInput','$fee','$status','$maxParticipates',0,'Group ($classType)')";
  mysqli_query($con, $sql);
 
- $sql = "INSERT INTO  trainingsessionformember(sessionID,title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type,trainer,trainerspecialty)
-        VALUES ('$sessionID','$title','$dateInput','$timeInput','$fee','$status',$maxParticipates,0,'Group ($classType)','Eugene','MMA')";
+ $sql = "INSERT INTO  trainingsessionformember(title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type,trainer,trainerspecialty)
+        VALUES ('$title','$dateInput','$timeInput','$fee','$status','$maxParticipates',0,'Group ($classType)','$name','$specialty')";
  mysqli_query($con, $sql);
  mysqli_close($con);
 ?>
