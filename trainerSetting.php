@@ -63,12 +63,12 @@ $specialty=$_SESSION['specialty'];
               </h1>
             </div>
           </div>
-
+        <form action="settingTrainerInput.php" method="post">
           <div class="row">
             <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
               <input type="text" style="height:70px;" name="name"
               class=" form form-control input-lg" id="inputName"
-              placeholder="NAME"<?php echo '"<input value="'.$name. '""'?>>
+              placeholder="NAME"<?php echo '"<input value="'.$name.'""'?>>
             </div>
           </div>
 
@@ -76,7 +76,7 @@ $specialty=$_SESSION['specialty'];
             <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
               <input type="email" style="height:70px" name="email"
               class=" form form-control input-lg" id="inputEmail"
-              placeholder="EMAIL"<?php echo '"<input value="'.$email. '""'?>>
+              placeholder="EMAIL"<?php echo '"<input value="'.$email.'""'?>>
             </div>
           </div>
 
@@ -92,21 +92,21 @@ $specialty=$_SESSION['specialty'];
             <div class="col-xs-12 col-md-12 col-md-offset-4 settingForm">
               <input type="text" style="height:70px" name="specialty"
               class=" form form-control input-lg" id="inputSpecialty"
-              placeholder="SPECIALTY"<?php echo '"<input value="'.$specialty. '""'?>>
+              placeholder="SPECIALTY"<?php echo '"<input value="'.$specialty.'""'?>>
             </div>
           </div>
 
           <div class="row">
             <div class="col-xs-3 col-md-2 col-md-offset-4"
             style="margin-right:0.8%">
-              <button type="submit" class="setting"
-              onclick="SettingTrainer()">SAVE</button>
+              <button type="submit" name="submit" class="setting">SAVE</button>
             </div>
             <div class="col-xs-3 col-md-2">
-              <a href="trainerPage.html">
+              <a href="trainerPage.php">
                 <button type="button" class="setting">CANCEL</button></a>
             </div>
           </div>
+        </form>
         </div>
       </div>
 

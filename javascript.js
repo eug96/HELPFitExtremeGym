@@ -94,11 +94,6 @@ function UpdateValidation(){
   location.replace("memberLogin.html");
 }
 
-function SettingTrainer(){
-  location.replace("trainerPage.html");
-  alert("Your Data Has Been Saved");
-}
-
 function updateValidation(){
 
   var date = document.getElementById('inputDate');
