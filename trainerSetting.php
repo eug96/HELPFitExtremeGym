@@ -34,8 +34,7 @@ $specialty=$_SESSION['specialty'];
       <div class="container-fluid containerplus">
         <div class="row">
           <div class"col-md-4">
-            <a href="home.html"><img src="Logo.jpg" style="position: absolute;">
-            </a></img>
+            <img src="Logo.jpg" style="position: absolute;"></img>
           </div>
         </div>
       </div>
@@ -49,7 +48,7 @@ $specialty=$_SESSION['specialty'];
       <ul class ="nav navigation nav-tabs navbar-right"
       style="margin-right:-15px;">
         <li class="nav nav-tabs">
-          <a href="trainerSetting.html">SETTING</a>
+          <a href="trainerSetting.php">SETTING</a>
         </li>
       </ul>
 

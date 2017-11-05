@@ -11,7 +11,7 @@
  $sql = "SELECT sessionID FROM trainingsessionformember WHERE sessionID='$choice'";
  $result = mysqli_query($con,$sql);
 
- header('Location: memberPage.html');
+ header('Location: memberPage.php');
  if(mysqli_num_rows($result) > 0){
    $sql = "UPDATE trainingsessionformember SET numParticipates = numParticipates+1
     WHERE sessionID='$choice'";

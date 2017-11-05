@@ -34,8 +34,7 @@ $name=$_SESSION['name'];
       <div class="row">
 
         <div class"col-md-4">
-          <a href="home.html"><img src="Logo.jpg" style="position: absolute;">
-          </a></img>
+          <img src="Logo.jpg" style="position: absolute;"></img>
         </div>
       </div>
     </div>
