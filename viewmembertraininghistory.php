@@ -48,13 +48,13 @@
 
       <ul class ="nav navigation nav-tabs navbar-right">
         <li class="nav nav-tabs">
-          <a href="home.html">LOG OUT</a>
+          <a href="signOut.php">LOG OUT</a>
         </li>
       </ul>
 
       <ul class ="nav navigation nav-tabs navbar-right" style="margin-right: -15px;">
         <li class="nav nav-tabs">
-          <a href="memberSetting.html">SETTING</a>
+          <a href="memberSetting.php">SETTING</a>
         </li>
       </ul>
 
@@ -103,9 +103,6 @@
 
     //Step 2: Query
     $sql = "SELECT * FROM viewtraininghistoryformember WHERE username = '$sessionUsername'";
-    // $sql = "SELECT * FROM books";
-    // $sql = "SELECT * FROM books WHERE type='programming' AND price=70";
-    // $sql = "SELECT * FROM books WHERE type='programming' OR price=70";
     $result = mysqli_query($con, $sql);
 
 
@@ -128,27 +125,14 @@
     }
      ?>
    </tbody>
-      <!-- <tr>
-        <td>BIT 210</td>
-        <td>Sport</td>
-        <td>20/9/2017</td>
-        <td>8PM</td>
-        <td>Group (Sport)</td>
-      </tr>
-      <tr>
-        <td>BIT 216</td>
-        <td>Mass Gainer</td>
-        <td>15/9/2017</td>
-        <td>9PM</td>
-        <td>Personal</td>
-      </tr> -->
     </table>
+    <br/>
   </div>
 
   <div class="row">
     <div class=" col-md-push-3 col-md-offset-9 col-sm-push-5 col-sm-offset-7">
-      <a href="memberPage.html" class="navButton">Back</a>
-      <a href="reviewtrainer.html" class="navButton">Review Trainer</a>
+      <a href="memberPage.php" class="navButton">Back</a>
+      <a href="reviewtrainer.php" class="navButton">Review Trainer</a>
     </div>
   </div>
 

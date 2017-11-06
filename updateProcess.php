@@ -15,8 +15,8 @@ session_start();
  $newClass = $_POST['selClass'];
  $newStatus = $_POST['selStatus'];
 
- $sql = "SELECT sessionID FROM trainingsession WHERE sessionID='$choice'";
- $sql = "SELECT sessionID FROM trainingsessionformember WHERE sessionID='$choice'";
+ // $sql = "SELECT sessionID FROM trainingsession WHERE sessionID='$choice'";
+ $sql = "SELECT sessionID FROM viewtraininghistory WHERE sessionID='$choice'";
  $result = mysqli_query($con,$sql);
 
  // header('Location: updatetraining.php');
@@ -27,17 +27,14 @@ session_start();
  //   newTime = '$timeInput', newFee = '$fee', newClass = '$type', newStatus = '$status' WHERE sessionID='$choice'";
  // }
 
- header('Location: updatetraining.php');
+ header('refresh:0;url=updatetraining.php');
  if(mysqli_num_rows($result) > 0){
-   $sql = "UPDATE trainingsessionformember SET dateInput = '$newDate',
-   timeInput = '$newTime', fee = '$newFee', type='$newClass' , status = '$newStatus' WHERE sessionID='$choice'";
-   $sql = "UPDATE trainingsession SET dateInput = '$newDate',
+  //  $sql = "UPDATE viewtraininghistory SET dateInput = '$newDate',
+  //  timeInput = '$newTime', fee = '$newFee', type='$newClass' , status = '$newStatus' WHERE sessionID='$choice'";
+   $sql = "UPDATE viewtraininghistory SET dateInput = '$newDate',
    timeInput = '$newTime', fee = '$newFee', type='$newClass' , status = '$newStatus' WHERE sessionID='$choice'";
  }
-
- // else {
- //   echo "<script type="text/javascript">alert("hello!");</script>";
- // }
+echo "<script type='text/javascript'>alert('Your training session has been updated!')</script>";
  mysqli_query($con, $sql);
  mysqli_close($con);
 ?>

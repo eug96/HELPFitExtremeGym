@@ -63,7 +63,7 @@ $name=$_SESSION['name'];
 
         <div class="row" style="margin-top:5%">
           <div class="col-xs-4 col-md-4 memberHome">
-            <a href="viewtrainertraininghistory.html"><img src="trainingHistory.jpg"></img></a>
+            <a href="viewtrainertraininghistory.php"><img src="trainingHistory.jpg"></img></a>
           </div>
 
           <div class="col-xs-4 col-md-4 memberHome">
@@ -80,7 +80,7 @@ $name=$_SESSION['name'];
           </div>
           <div class="col-xs-4 col-md4 memberHome"
             style="margin-top:1%">
-            <a href="updatetraining.html"><img src="updateTrainingRecord.jpg"></img></a>
+            <a href="updatetraining.php"><img src="updateTrainingRecord.jpg"></img></a>
           </div>
         </div>
       </div>

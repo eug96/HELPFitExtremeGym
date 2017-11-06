@@ -48,13 +48,13 @@
 
       <ul class ="nav navigation nav-tabs navbar-right">
         <li class="nav nav-tabs">
-          <a href="home.html">LOG OUT</a>
+          <a href="signOut.php">LOG OUT</a>
         </li>
       </ul>
 
       <ul class ="nav navigation nav-tabs navbar-right" style="margin-right: -15px;">
         <li class="nav nav-tabs">
-          <a href="trainerSetting.html">SETTING</a>
+          <a href="trainerSetting.php">SETTING</a>
         </li>
       </ul>
 
@@ -143,12 +143,15 @@
         <td>Personal</td>
       </tr> -->
     </table>
+    <br/>
   </div>
+
+
 
   <div class="row">
     <div class=" col-md-push-4 col-md-offset-8 col-sm-push-7 col-sm-offset-5">
-      <a href="trainerPage.html" class="navButton">Back</a>
-      <a href="updatetraining.html" class="navButton">Update Training Session</a>
+      <a href="trainerPage.php" class="navButton">Back</a>
+      <a href="updatetraining.php" class="navButton">Update Training Session</a>
     </div>
   </div>
 
