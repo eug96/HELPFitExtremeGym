@@ -1,5 +1,12 @@
 <!DOCTYPE html>
+
+<?php
+  session_start();
+  $name=$_SESSION['name'];
+?>
+
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +42,7 @@
     <div class="row">
 
       <div class"col-md-4">
-        <a href="home.html"><img src="Logo.jpg" style="position: absolute;">
+        <img src="Logo.jpg" style="position: absolute;">
         </a></img>
       </div>
 
@@ -67,7 +74,7 @@
   <div class="row" >
   <br/>
   <div class="col-xs-12 col-md-12">
-    <span class="welcome">Welcome, <span id="welcome">Member</span></span>
+    <span class="welcome">Welcome, <span id="welcome"<?php echo " ". $name.""; ?></span></span>
   </div>
 
   </div>
@@ -78,7 +85,7 @@
   <div class="col-xs-12 col-md-12">
     <table class="table table-responsive table-bordered viewmember">
 
-
+      <thead>
       <tr>
       <th class="col-md-1 col-xs-1">Session ID</th>
       <th class="col-md-2 col-xs-1">Title</th>
@@ -86,12 +93,58 @@
       <th class="col-md-1 col-xs-1">Time</th>
       <th class="col-md-1 col-xs-1">Fee</th>
       <th class="col-md-1 col-xs-1">Status</th>
-      <th class="col-md-2 col-xs-2">Max Participation</th>
+      <th class="col-md-2 col-xs-2">Max Participants</th>
       <th class="col-md-2 col-xs-2">Number Of Participants</th>
       <th class="col-md-1 col-xs-1">Type</th>
       </tr>
+      </thead>
 
-      <tr>
+      <?php
+      //Step 1: Connect to database
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "helpfitextremegym";
+      $con = new mysqli($servername, $username, $password, $dbname);
+      if (!$con) {
+       die("Could not connect to database");
+       }
+      // echo "connected!!"."</br>";
+
+      //Step 2: Query
+      $sql = "SELECT * FROM trainingsession";
+      // $sql = "SELECT * FROM books";
+      // $sql = "SELECT * FROM books WHERE type='programming' AND price=70";
+      // $sql = "SELECT * FROM books WHERE type='programming' OR price=70";
+      $result = mysqli_query($con, $sql);
+
+
+
+      //Step 3: Display result
+      if (mysqli_num_rows($result) > 0) {
+          // output data of each row
+         while($row = mysqli_fetch_assoc($result)) {
+           echo '<tr>
+           <td>'. $row["sessionID"].'</td>
+           <td>'. $row["title"].'</td>
+           <td>'. date('d F, Y', strtotime($row['dateInput'])) . '</td>
+           <td>'. date('G:i',strtotime($row['timeInput'])).'</td>
+           <td>'. $row["fee"].'</td>
+           <td>'. $row["status"].'</td>
+           <td>'. $row["maxParticipates"].'</td>
+           <td>'. $row["numParticipates"].'</td>
+           <td>'. $row["type"].'</td>
+           <td>'. $row["notes"].'</td>
+           </tr>';
+              // echo "Title:" . $row["title"]. " Type: " . $row["type"]."</br>";
+          }
+      } else {
+          echo "0 results";
+      }
+       ?>
+     </tbody>
+
+      <!-- <tr>
         <td>BIT 210</td>
         <td>Sport</td>
         <td>20/9/2017</td>
@@ -112,18 +165,46 @@
         <td>1</td>
         <td>0</td>
         <td>Personal</td>
-      </tr>
+      </tr> -->
     </table>
   </div>
 
   <div class="row">
     <div class="col-xs-12 col-md-12">
-      <select class="form-control" id="chooseUpdate"
+      <form class="" action="updateProcess.php" method="post">
+
+
+      <select class="form-control" name="chooseSession"
        style="width:310px;height:40px;font-size: 18px;margin-left:15px;">
         <option>CHOOSE TRAINING SESSION</option>
-        <option>BIT210</option>
-        <option>BIT216</option>
+        <!-- <option>BIT210</option>
+        <option>BIT216</option> -->
+        <?php
+
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "helpfitextremegym";
+        $con = new mysqli($servername, $username, $password, $dbname);
+
+        $sql = "SELECT * FROM trainingsession";
+        $result = mysqli_query($con, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            // output data of each row
+           while($row = mysqli_fetch_assoc($result)) {
+             echo '
+             <option>'. $row["sessionID"].'</option>
+
+             ';
+                // echo "Title:" . $row["title"]. " Type: " . $row["type"]."</br>";
+            }
+        } else {
+            echo "0 results";
+        }
+         ?>
       </select>
+      </form>
     </div>
   </div>
 
@@ -153,25 +234,58 @@
                       </h4>
                   </div>
 
+
+
                   <!-- Modal Body -->
                   <div class="modal-body">
 
                       <form class="form-horizontal" role="form" id="updateModalHorizontal"
-                      action="updatetraining.php" method="post">
+                      action="updateProcess.php" method="post">
                         <div class="form-group">
+                          <label  class="col-sm-2 control-label"
+                                    for="inputSession">Choose a Session</label>
+                          <div class="col-sm-10">
+                          <select class="form-control" name="chooseSession">
+                            <option>CHOOSE TRAINING SESSION</option>
+                            <?php
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $dbname = "helpfitextremegym";
+                            $con = new mysqli($servername, $username, $password, $dbname);
+
+                            $sql = "SELECT * FROM trainingsession";
+                            $result = mysqli_query($con, $sql);
+
+                            if (mysqli_num_rows($result) > 0) {
+                                // output data of each row
+                               while($row = mysqli_fetch_assoc($result)) {
+                                 echo '
+                                 <option>'. $row["sessionID"].'</option>
+
+                                 ';
+                                    // echo "Title:" . $row["title"]. " Type: " . $row["type"]."</br>";
+                                }
+                            } else {
+                                echo "0 results";
+                            }
+                             ?>
+                          </select>
+                        </div>
                           <label  class="col-sm-2 control-label"
                                     for="inputDate">Date</label>
                           <div class="col-sm-10">
-                              <input type="date" class="form-control"
-                              id="inputDate" placeholder="Date" required/>
+                              <input type="text" class="form-control"
+                              id="inputDate" name="inputDate" placeholder="Date" required
+                              value="<?php echo '"<input value="'.$dateInput. '""'?> "/>
                           </div>
                         </div>
                         <div class="form-group">
                           <label class="col-sm-2 control-label"
                                 for="inputTime" >Time</label>
                           <div class="col-sm-10">
-                              <input type="time" class="form-control"
-                                  id="inputTime" placeholder="Time" required/>
+                              <input type="text" class="form-control"
+                                  id="inputTime" name="inputTime" placeholder="Time" required/>
                           </div>
                         </div>
                         <div class="form-group">
@@ -179,14 +293,14 @@
                                 for="inputFee" >Fee</label>
                           <div class="col-sm-10">
                               <input type="number" class="form-control"
-                                  id="inputFee" placeholder="Fee" required/>
+                                  id="inputFee" name="inputFee" placeholder="Fee" required/>
                           </div>
                         </div>
                         <div class="form-group">
                           <label class="col-sm-2 control-label"
                                 for="selClass" >Class Type</label>
                           <div class="col-sm-10">
-                            <select class="form-control" id="selClass" required>
+                            <select class="form-control" id="selClass" name="selClass" required>
                               <option>Personal</option>
                               <option>Group</option>
                             </select>
@@ -196,7 +310,7 @@
                           <label class="col-sm-2 control-label"
                                 for="selStatus" >Status</label>
                           <div class="col-sm-10">
-                            <select class="form-control" id="selStatus" required>
+                            <select class="form-control" id="selStatus" name="selStatus" required>
                             <option value="Available">Available</option>
                             <option value="Completed">Completed</option>
                             <option value="Cancelled">Cancelled</option>

@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+  session_start();
+  $name=$_SESSION['name'];
+?>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -34,7 +38,7 @@
     <div class="row">
 
       <div class"col-md-4">
-        <a href="home.html"><img src="Logo.jpg" style="position: absolute;">
+        <img src="Logo.jpg" style="position: absolute;">
         </a></img>
       </div>
 
@@ -62,7 +66,7 @@
   <div class="row" >
   <br/>
   <div class="col-xs-12 col-md-12">
-    <span class="welcome">Welcome, <span id="welcome">Member</span></span>
+    <span class="welcome">Welcome, <span id="welcome"><?php echo " ". $name.""; ?></span></span>
   </div>
 
   </div>
@@ -89,7 +93,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "gym";
+    $dbname = "helpfitextremegym";
     $con = new mysqli($servername, $username, $password, $dbname);
     if (!$con) {
      die("Could not connect to database");
@@ -97,7 +101,7 @@
     // echo "connected!!"."</br>";
 
     //Step 2: Query
-    $sql = "SELECT * FROM traininghistory";
+    $sql = "SELECT * FROM trainingsession";
     // $sql = "SELECT * FROM books";
     // $sql = "SELECT * FROM books WHERE type='programming' AND price=70";
     // $sql = "SELECT * FROM books WHERE type='programming' OR price=70";
@@ -110,11 +114,11 @@
         // output data of each row
        while($row = mysqli_fetch_assoc($result)) {
          echo '<tr>
-         <td>'. $row["ID"].'</td>
-         <td>'. $row["Title"].'</td>
-         <td>'. date('d F, Y', strtotime($row['Date'])) . '</td>
-         <td>'. date('G:i',strtotime($row['Time'])).'</td>
-         <td>'. $row["Type"].'</td>
+         <td>'. $row["sessionID"].'</td>
+         <td>'. $row["title"].'</td>
+         <td>'. date('d F, Y', strtotime($row['dateInput'])) . '</td>
+         <td>'. date('G:i',strtotime($row['timeInput'])).'</td>
+         <td>'. $row["type"].'</td>
          </tr>';
             // echo "Title:" . $row["title"]. " Type: " . $row["type"]."</br>";
         }
