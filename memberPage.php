@@ -38,7 +38,7 @@
 
           <ul class ="nav navigation nav-tabs navbar-right">
             <li class="nav nav-tabs">
-              <a href="home.html">LOG OUT</a>
+              <a href="signOut.php">LOG OUT</a>
             </li>
           </ul>
 
