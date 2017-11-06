@@ -7,8 +7,8 @@ session_start();
  $con = new mysqli($servername, $username, $password, $dbname);
 
  $choice = $_POST['chooseSession'];
- // $newDate = date('Y-m-d H:i:s', strtotime($_POST['inputDate']));
- $newDate = $_POST['inputDate'];
+ $newDate = date('Y-m-d H:i:s', strtotime($_POST['inputDate']));
+ // $newDate = $_POST['inputDate'];
  $newTime = $_POST['inputTime'];
  // $newTime =date('H:i:s',strtotime($_POST['inputTime']));
  $newFee = $_POST['inputFee'];

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php
   session_start();
-  $name=$_SESSION['name'];
+  $name= $_SESSION['name'];
+  $sessionUsername= $_SESSION['username'];
 ?>
 <html lang="en">
 <head>
@@ -101,7 +102,7 @@
     // echo "connected!!"."</br>";
 
     //Step 2: Query
-    $sql = "SELECT * FROM trainingsession";
+    $sql = "SELECT * FROM viewtraininghistoryformember WHERE username = '$sessionUsername'";
     // $sql = "SELECT * FROM books";
     // $sql = "SELECT * FROM books WHERE type='programming' AND price=70";
     // $sql = "SELECT * FROM books WHERE type='programming' OR price=70";

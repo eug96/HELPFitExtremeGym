@@ -96,6 +96,7 @@
       <th class="col-md-2 col-xs-2">Max Participants</th>
       <th class="col-md-2 col-xs-2">Number Of Participants</th>
       <th class="col-md-1 col-xs-1">Type</th>
+      <th class="col-md-1 col-xs-1">Notes</th>
       </tr>
       </thead>
 
@@ -143,70 +144,9 @@
       }
        ?>
      </tbody>
-
-      <!-- <tr>
-        <td>BIT 210</td>
-        <td>Sport</td>
-        <td>20/9/2017</td>
-        <td>8PM</td>
-        <td>RM 50</td>
-        <td>Full</td>
-        <td>15</td>
-        <td>10</td>
-        <td>Group (Sport)</td>
-      </tr>
-      <tr>
-        <td>BIT 216</td>
-        <td>Mass Gainer</td>
-        <td>15/9/2017</td>
-        <td>9PM</td>
-        <td>RM 80</td>
-        <td>Available</td>
-        <td>1</td>
-        <td>0</td>
-        <td>Personal</td>
-      </tr> -->
     </table>
   </div>
 
-  <div class="row">
-    <div class="col-xs-12 col-md-12">
-      <form class="" action="updateProcess.php" method="post">
-
-
-      <select class="form-control" name="chooseSession"
-       style="width:310px;height:40px;font-size: 18px;margin-left:15px;">
-        <option>CHOOSE TRAINING SESSION</option>
-        <!-- <option>BIT210</option>
-        <option>BIT216</option> -->
-        <?php
-
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "helpfitextremegym";
-        $con = new mysqli($servername, $username, $password, $dbname);
-
-        $sql = "SELECT * FROM trainingsession";
-        $result = mysqli_query($con, $sql);
-
-        if (mysqli_num_rows($result) > 0) {
-            // output data of each row
-           while($row = mysqli_fetch_assoc($result)) {
-             echo '
-             <option>'. $row["sessionID"].'</option>
-
-             ';
-                // echo "Title:" . $row["title"]. " Type: " . $row["type"]."</br>";
-            }
-        } else {
-            echo "0 results";
-        }
-         ?>
-      </select>
-      </form>
-    </div>
-  </div>
 
   <br/>
 
@@ -275,16 +215,16 @@
                           <label  class="col-sm-2 control-label"
                                     for="inputDate">Date</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control"
+                              <input type="date" class="form-control"
                               id="inputDate" name="inputDate" placeholder="Date" required
-                              value="<?php echo '"<input value="'.$dateInput. '""'?> "/>
+                              value=""/>
                           </div>
                         </div>
                         <div class="form-group">
                           <label class="col-sm-2 control-label"
                                 for="inputTime" >Time</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control"
+                              <input type="time" class="form-control"
                                   id="inputTime" name="inputTime" placeholder="Time" required/>
                           </div>
                         </div>

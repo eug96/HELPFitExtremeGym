@@ -2,6 +2,7 @@
 <?php
   session_start();
   $name=$_SESSION['name'];
+  $sessionUsername= $_SESSION['username'];
 ?>
 <html lang="en">
 <head>
@@ -102,7 +103,7 @@
       // echo "connected!!"."</br>";
 
       //Step 2: Query
-      $sql = "SELECT * FROM trainingsession";
+      $sql = "SELECT * FROM viewtraininghistory WHERE username = '$sessionUsername'";
 
       $result = mysqli_query($con, $sql);
 
