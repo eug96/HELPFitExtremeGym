@@ -153,7 +153,7 @@ function AttendTrainingSession(){
     return false;
   }
 
-  alert("You Have Attended " + " Training Session" + trainingSession.value);
+  alert("You Have Attended" + " Training Session " + trainingSession.value);
 }
 
 function recordGroupTraningSession(){
