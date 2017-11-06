@@ -60,7 +60,7 @@
 
             <div class="row" style="margin-top:5%">
               <div class="col-xs-4 col-md-2 memberHome">
-                <a href="viewmembertraininghistory.html"><img src="trainingHistory.jpg"></img></a>
+                <a href="viewmembertraininghistory.php"><img src="trainingHistory.jpg"></img></a>
               </div>
 
               <div class="col-xs-4 col-md-2 memberHome">
@@ -69,7 +69,7 @@
               </div>
 
               <div class="col-xs-4 col-md-2 memberHome">
-                <a href="reviewtrainer.html"><img src="reviewTrainer.jpg"></img></a>
+                <a href="reviewtrainer.php"><img src="reviewTrainer.jpg"></img></a>
               </div>
             </div>
         </div>
