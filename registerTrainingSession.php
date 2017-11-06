@@ -34,7 +34,7 @@
 
       <ul class ="nav navigation nav-tabs navbar-right">
         <li class="nav nav-tabs">
-          <a href="home.html">LOG OUT</a>
+          <a href="signOut.php">LOG OUT</a>
         </li>
       </ul>
 
@@ -82,8 +82,8 @@
                      echo '<tr>
                      <td>'. $row["sessionID"].'</td>
                      <td>'. $row["title"].'</td>
-                     <td>'. $row['dateInput'] . '</td>
-                     <td>'. $row['timeInput'].'</td>
+                     <td>'. date('d F, Y',strtotime($row['dateInput'])) . '</td>
+                     <td>'. date('G:i',strtotime($row['timeInput'])).'</td>
                      <td>'. $row["type"].'</td>
                      <td>'. $row["status"].'</td>
                      <td>'. $row["trainer"].'</td>

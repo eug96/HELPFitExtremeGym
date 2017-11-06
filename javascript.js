@@ -152,8 +152,6 @@ function AttendTrainingSession(){
     alert("Please Select a Training Session to Attend");
     return false;
   }
-
-  alert("You Have Attended" + " Training Session " + trainingSession.value);
 }
 
 function recordGroupTraningSession(){

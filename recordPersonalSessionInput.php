@@ -2,6 +2,7 @@
  session_start();
  $name=$_SESSION['name'];
  $specialty=$_SESSION['specialty'];
+ $usernameInput=$_SESSION['username'];
 
  $servername = "localhost";
  $username = "root";
@@ -22,6 +23,11 @@
 
  $sql = "INSERT INTO  trainingsessionformember(title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type,trainer,trainerspecialty)
          VALUES ('$title','$dateInput','$timeInput','$fee','$status',1,0,'Personal','$name','$specialty')";
+ mysqli_query($con, $sql);
+
+ $sql= "INSERT INTO viewtraininghistory (username,sessionID,title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type)
+        SELECT '$usernameInput',sessionID,title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type FROM trainingsession";
+
  mysqli_query($con, $sql);
  mysqli_close($con);
 ?>
