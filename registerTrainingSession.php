@@ -41,7 +41,7 @@
       <ul class ="nav navigation nav-tabs navbar-right"
       style="margin-right:-15px;">
         <li class="nav nav-tabs">
-          <a href="memberSetting.html">SETTING</a>
+          <a href="memberSetting.php">SETTING</a>
         </li>
       </ul>
 
