@@ -67,14 +67,14 @@ $name=$_SESSION['name'];
           </div>
 
           <div class="col-xs-4 col-md-4 memberHome">
-            <a href="recordPersonalTrainingSession.html">
+            <a href="recordPersonalTrainingSession.php">
             <img src="personalTrainingSession.jpg"></img></a>
           </div>
         </div>
 
         <div class="row">
           <div class="col-xs-4 col-md-4 memberHome" style="margin-top:1%">
-            <a href="recordGroupTrainingSession.html">
+            <a href="recordGroupTrainingSession.php">
             <img src="groupTrainingSession.jpg">
             </img></a>
           </div>

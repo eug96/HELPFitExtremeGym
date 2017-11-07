@@ -28,6 +28,7 @@
  $sql= "INSERT INTO viewtraininghistory (username,sessionID,title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type)
         SELECT '$usernameInput',sessionID,title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type FROM trainingsession";
 
+
  mysqli_query($con, $sql);
  mysqli_close($con);
 ?>
