@@ -3,6 +3,7 @@
 <?php
   session_start();
   $name=$_SESSION['name'];
+  $sessionUsername=$_SESSION['username'];
 ?>
 
 <html lang="en">
@@ -51,13 +52,13 @@
 
       <ul class ="nav navigation nav-tabs navbar-right">
         <li class="nav nav-tabs">
-          <a href="home.html">LOG OUT</a>
+          <a href="signOut.php">LOG OUT</a>
         </li>
       </ul>
 
       <ul class ="nav navigation nav-tabs navbar-right" style="margin-right: -15px;">
         <li class="nav nav-tabs">
-          <a href="memberSetting.html">SETTING</a>
+          <a href="trainerSetting.php">SETTING</a>
         </li>
       </ul>
 
@@ -74,7 +75,7 @@
   <div class="row" >
   <br/>
   <div class="col-xs-12 col-md-12">
-    <span class="welcome">Welcome, <span id="welcome"<?php echo " ". $name.""; ?></span></span>
+    <span class="welcome">Welcome, <span id="welcome"><?php echo " ". $name.""; ?></span></span>
   </div>
 
   </div>
@@ -113,10 +114,7 @@
       // echo "connected!!"."</br>";
 
       //Step 2: Query
-      $sql = "SELECT * FROM trainingsession";
-      // $sql = "SELECT * FROM books";
-      // $sql = "SELECT * FROM books WHERE type='programming' AND price=70";
-      // $sql = "SELECT * FROM books WHERE type='programming' OR price=70";
+      $sql = "SELECT * FROM viewtraininghistory WHERE username = '$sessionUsername'";
       $result = mysqli_query($con, $sql);
 
 
@@ -130,7 +128,7 @@
            <td>'. $row["title"].'</td>
            <td>'. date('d F, Y', strtotime($row['dateInput'])) . '</td>
            <td>'. date('G:i',strtotime($row['timeInput'])).'</td>
-           <td>'. $row["fee"].'</td>
+           <td>RM '. $row["fee"].'</td>
            <td>'. $row["status"].'</td>
            <td>'. $row["maxParticipates"].'</td>
            <td>'. $row["numParticipates"].'</td>
@@ -152,7 +150,7 @@
 
   <div class="row">
     <div class=" col-md-push-5 col-md-offset-7 col-sm-push-4 col-sm-offset-2">
-      <a href="trainerPage.html" role="button" class="btn navButton">Back</a>
+      <a href="trainerPage.php" role="button" class="btn navButton">Back</a>
       <!-- <a href="#" class="navButton"><span id="revieworupdate">Review Trainer</span></a> -->
       <a class="btn navButton" data-toggle="modal" data-target="#updateModalHorizontal">
           Update Training Session
@@ -194,7 +192,7 @@
                             $dbname = "helpfitextremegym";
                             $con = new mysqli($servername, $username, $password, $dbname);
 
-                            $sql = "SELECT * FROM trainingsession";
+                            $sql = "SELECT * FROM viewtraininghistory WHERE username = '$sessionUsername'";
                             $result = mysqli_query($con, $sql);
 
                             if (mysqli_num_rows($result) > 0) {
