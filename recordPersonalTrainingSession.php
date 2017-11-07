@@ -92,6 +92,14 @@ $name=$_SESSION['name'];
 
         <div class="row">
           <div class="col-xs-12 col-md-12 col-md-offset-4 recordForm">
+            <input type="text" style="height:70px" name="notes" class="
+             form form-control input-lg" id="inputNotes"
+             placeholder="NOTES">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-md-12 col-md-offset-4 recordForm">
             <select class="form-control listbox" name="status" id="inputStatus"
              style="width:470px;height:70px;font-size: 18px;">
               <option>AVAILABLE</option>
