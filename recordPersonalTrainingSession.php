@@ -1,3 +1,7 @@
+<?php
+session_start();
+$name=$_SESSION['name'];
+ ?>
 <html>
 
   <head>
@@ -45,8 +49,8 @@
     <div class="trainerPage">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xs-12 col-md-12 header">
-            <h3><span>WELCOME EUGENE! ENTER THE
+          <div class="col-xs-12 col-md-12 header" style="text-transform:uppercase">
+            <h3><span>WELCOME <?php echo " ". $name.""; ?>! ENTER THE
               INFO TO CREATE A TRAINING SESSION</span></h3>
           </div>
         </div>
@@ -83,6 +87,14 @@
             <input type="number" style="height:70px" name="fee" class="
              form form-control input-lg" id="inputFee"
              placeholder="FEE (In Numbering Format)">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-md-12 col-md-offset-4 recordForm">
+            <input type="text" style="height:70px" name="notes" class="
+             form form-control input-lg" id="inputNotes"
+             placeholder="NOTES">
           </div>
         </div>
 
