@@ -178,12 +178,12 @@
                   <div class="modal-body">
 
                       <form class="form-horizontal" role="form" id="updateModalHorizontal"
-                      action="updateProcess.php" method="post">
+                      action="updateProcess.php" method="post" onsubmit="return updateValidation()">
                         <div class="form-group">
                           <label  class="col-sm-2 control-label"
                                     for="inputSession">Choose a Session</label>
                           <div class="col-sm-10">
-                          <select class="form-control" name="chooseSession">
+                          <select class="form-control" id="chooseSession" name="chooseSession">
                             <option>CHOOSE TRAINING SESSION</option>
                             <?php
                             $servername = "localhost";

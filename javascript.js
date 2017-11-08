@@ -96,6 +96,7 @@ function UpdateValidation(){
 
 function updateValidation(){
 
+  var trainingSession = document.getElementById('chooseSession')
   var date = document.getElementById('inputDate');
   var time = document.getElementById('inputTime');
   var fee = document.getElementById('inputFee');
@@ -105,6 +106,11 @@ function updateValidation(){
   if (date.value.length==0) {
       alert("Please Enter Date!");
       return false;
+  }
+
+  if(trainingSession.value== "CHOOSE TRAINING SESSION"){
+    alert("Please Select a Training Session to Attend!");
+    return false;
   }
 
   else if (time.value.length==0) {
@@ -127,7 +133,7 @@ function updateValidation(){
     return false;
   }
 
-  location.replace("updatetrainer.html");
+  location.replace("updatetrainer.php");
 }
 
 function reviewValidation(){
@@ -142,7 +148,7 @@ for (var i = 0, len = radios.length; i < len; i++) {
 alert("Please Select a Rating!");
 return false;
 
-  location.replace("reviewtrainer.html");
+  location.replace("reviewtrainer.php");
 }
 
 function AttendTrainingSession(){
