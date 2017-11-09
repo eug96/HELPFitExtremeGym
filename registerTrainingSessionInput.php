@@ -2,6 +2,7 @@
  session_start();
  $usernameInput=$_SESSION['username'];
 
+
  $servername = "localhost";
  $username = "root";
  $password = "";

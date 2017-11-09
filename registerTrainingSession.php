@@ -1,3 +1,7 @@
+<?php
+ session_start();
+ $name=$_SESSION['name'];
+ ?>
 <html>
 
   <head>
@@ -48,8 +52,9 @@
       <div class="memberPage">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-xs-12 col-md-12 header" style="margin-bottom:1%">
-              <h1><span>WELCOME</span></h1>
+            <div class="col-xs-12 col-md-12 header" style="margin-bottom:1%;
+            text-transform:uppercase">
+              <h1><span>WELCOME <?php echo " ". $name.""; ?></span></h1>
             </div>
           </div>
 
