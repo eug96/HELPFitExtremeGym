@@ -21,16 +21,16 @@
 
 
  header('Location: trainerPage.php');
- $sql = "INSERT INTO  trainingsession (title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type)
-         VALUES ('$title','$dateInput','$timeInput','$fee','$status','$maxParticipates',0,'Group ($classType)')";
+ $sql = "INSERT INTO  trainingsession (title,username,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type)
+         VALUES ('$title','$usernameInput','$dateInput','$timeInput','$fee','$status','$maxParticipates',0,'Group ($classType)')";
  mysqli_query($con, $sql);
 
  $sql = "INSERT INTO  trainingsessionformember(title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type,trainer,trainerspecialty)
         VALUES ('$title','$dateInput','$timeInput','$fee','$status','$maxParticipates',0,'Group ($classType)','$name','$specialty')";
  mysqli_query($con, $sql);
 
- $sql= "INSERT INTO viewtraininghistory (username,sessionID,title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type)
-        SELECT '$usernameInput',sessionID,title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type FROM trainingsession";
+
+
 
  mysqli_query($con, $sql);
  mysqli_close($con);

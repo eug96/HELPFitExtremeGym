@@ -49,7 +49,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-xs-12 col-md-12 header" style="margin-bottom:1%">
-              <h1><span>WELCOME EUGENE</span></h1>
+              <h1><span>WELCOME</span></h1>
             </div>
           </div>
 
@@ -136,7 +136,7 @@
           </div>
 
           <div class="col-xs-4 col-md-1" style="margin-top:2%">
-            <a href="memberPage.html">
+            <a href="memberPage.php">
               <button type="button" class="setting">BACK</button></a>
           </div>
       </div>

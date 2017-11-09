@@ -17,16 +17,14 @@
  $status=$_POST['status'];
 
  header('Location: trainerPage.php');
- $sql = "INSERT INTO  trainingsession (title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type)
-         VALUES ('$title','$dateInput','$timeInput','$fee','$status',1,0,'Personal')";
+ $sql = "INSERT INTO  trainingsession (title,username,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type)
+         VALUES ('$title','$usernameInput','$dateInput','$timeInput','$fee','$status',1,0,'Personal')";
  mysqli_query($con, $sql);
 
  $sql = "INSERT INTO  trainingsessionformember(title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type,trainer,trainerspecialty)
          VALUES ('$title','$dateInput','$timeInput','$fee','$status',1,0,'Personal','$name','$specialty')";
  mysqli_query($con, $sql);
 
- $sql= "INSERT INTO viewtraininghistory (username,sessionID,title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type)
-        SELECT '$usernameInput',sessionID,title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type FROM trainingsession";
 
 
  mysqli_query($con, $sql);
