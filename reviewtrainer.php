@@ -117,8 +117,6 @@
 
     $result = mysqli_query($con, $sql);
 
-
-
     //Step 3: Display result
     if (mysqli_num_rows($result) > 0) {
         // output data of each row
@@ -186,7 +184,8 @@
                   <!-- Modal Body -->
                   <div class="modal-body">
 
-                      <form class="form-horizontal" role="form" id="reviewModalHorizontal" action="reviewProcess.php" method="post">
+                      <form class="form-horizontal" role="form" id="reviewModalHorizontal"
+                        onsubmit="return reviewValidaiton()"action="reviewProcess.php" method="post">
                         <div class="form-group">
                           <label  class="col-sm-2 control-label"
                                     for="inputSession">Choose a Session</label>

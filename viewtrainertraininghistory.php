@@ -103,7 +103,7 @@
       // echo "connected!!"."</br>";
 
       //Step 2: Query
-      $sql = "SELECT * FROM viewtraininghistory WHERE username = '$sessionUsername'";
+      $sql = "SELECT * FROM trainingSession WHERE username = '$sessionUsername'";
 
       $result = mysqli_query($con, $sql);
 
@@ -123,7 +123,8 @@
               // echo "Title:" . $row["title"]. " Type: " . $row["type"]."</br>";
           }
       } else {
-          echo "0 results";
+          // echo "0 results";
+          echo "<script type='text/javascript'>alert('Your have not created any training sessions!')</script>";
       }
        ?>
      </tbody>

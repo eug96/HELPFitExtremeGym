@@ -121,7 +121,8 @@
             // echo "Title:" . $row["title"]. " Type: " . $row["type"]."</br>";
         }
     } else {
-        echo "0 results";
+        // echo "0 results";
+        echo "<script type='text/javascript'>alert('Your have not attended any training sessions yet!')</script>";
     }
      ?>
    </tbody>

@@ -114,7 +114,7 @@
       // echo "connected!!"."</br>";
 
       //Step 2: Query
-      $sql = "SELECT * FROM viewtraininghistory WHERE username = '$sessionUsername'";
+      $sql = "SELECT * FROM trainingSession WHERE username = '$sessionUsername'";
       $result = mysqli_query($con, $sql);
 
 
@@ -192,7 +192,7 @@
                             $dbname = "helpfitextremegym";
                             $con = new mysqli($servername, $username, $password, $dbname);
 
-                            $sql = "SELECT * FROM viewtraininghistory WHERE username = '$sessionUsername'";
+                            $sql = "SELECT * FROM trainingSession WHERE username = '$sessionUsername'";
                             $result = mysqli_query($con, $sql);
 
                             if (mysqli_num_rows($result) > 0) {
@@ -240,7 +240,9 @@
                           <div class="col-sm-10">
                             <select class="form-control" id="selClass" name="selClass" required>
                               <option>Personal</option>
-                              <option>Group</option>
+                              <option>Group(SPORT)</option>
+                              <option>Group(DANCE)</option>
+                              <option>Group(MMA)</option>
                             </select>
                           </div>
                         </div>
@@ -249,9 +251,9 @@
                                 for="selStatus" >Status</label>
                           <div class="col-sm-10">
                             <select class="form-control" id="selStatus" name="selStatus" required>
-                            <option value="Available">Available</option>
-                            <option value="Completed">Completed</option>
-                            <option value="Cancelled">Cancelled</option>
+                            <option value="Available">AVAILABLE</option>
+                            <option value="Completed">COMPLETED</option>
+                            <option value="Cancelled">CANCELLED</option>
                           </select>
                           </div>
                         </div>
