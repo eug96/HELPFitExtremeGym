@@ -27,8 +27,6 @@
 
  $sql = "INSERT INTO  trainingsessionformember(title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type,trainer,trainerspecialty)
         VALUES ('$title','$dateInput','$timeInput','$fee','$status','$maxParticipates',0,'Group ($classType)','$name','$specialty')";
- mysqli_query($con, $sql);
-
 
 
 

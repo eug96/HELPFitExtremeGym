@@ -23,7 +23,6 @@
 
  $sql = "INSERT INTO  trainingsessionformember(title,dateInput,timeInput,fee,status,maxParticipates,numParticipates,type,trainer,trainerspecialty)
          VALUES ('$title','$dateInput','$timeInput','$fee','$status',1,0,'Personal','$name','$specialty')";
- mysqli_query($con, $sql);
 
 
 
